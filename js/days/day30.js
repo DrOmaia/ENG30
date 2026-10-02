@@ -5,7 +5,7 @@ DAYS[30] = {
   titleAr: "المراجعة النهائية والاختبار",
   goal: "I can show what I learned in this course by passing the final test and writing a short paragraph.",
   goalAr: "أستطيع أن أُظهر ما تعلّمته في هذه الدورة بالنجاح في الاختبار النهائي وكتابة فقرة قصيرة.",
-  plan: { recap: 5, write: 10, quiz: 15 },
+  plan: { recap: 5, dialogue: 4, write: 10, quiz: 11 },
   recap: {
     title: "Your 30-day course in six steps",
     titleAr: "دورتك التي استمرّت 30 يومًا في ست خطوات",
@@ -31,6 +31,130 @@ DAYS[30] = {
     ],
     model: "My English learning journey has been exciting. Thirty days ago, I knew only a few simple sentences about myself. Now I can tell a short story, give directions and write a paragraph. For example, I have learned to use the past simple and to give my opinion politely. However, my listening is still slow, and I make mistakes with some verbs. In addition, I sometimes feel nervous when I speak. My next goals are clear. I am going to review my cards every day, and I will practice speaking with a friend every week. In three months, I will give a short talk in English.",
     aiPrompt: "I am learning English at level B1. Please check my final paragraph about my English learning journey and my next goals. Correct the grammar, check the connectors and the present perfect, explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Thirty days later",
+    "titleAr": "بعد ثلاثين يومًا",
+    "setting": "Three students talk about their progress and their next steps.",
+    "settingAr": "ثلاثة طلاب يتحدثون عن تقدّمهم وعن خطواتهم القادمة.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "We've finished thirty days. How do you feel now?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Better than before. Last month I could not write a full paragraph."
+      },
+      {
+        "speaker": "Huda",
+        "text": "I've learned many academic words, so now I read much faster."
+      },
+      {
+        "speaker": "Sara",
+        "text": "That is real progress. What are you going to do next?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I'm going to give a short talk at the club. I've already rehearsed it twice."
+      },
+      {
+        "speaker": "Huda",
+        "text": "If you practice every week, your English will improve quickly."
+      },
+      {
+        "speaker": "Sara",
+        "text": "I agree. In my opinion, speaking is harder than reading."
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes, but it is the most useful skill for work."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Let's meet on Sunday. We'll review the final unit together."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Perfect. I'll bring my notes and my vocabulary cards."
+      }
+    ],
+    "gloss": {
+      "paragraph": {
+        "en": "a group of sentences about one idea",
+        "ar": "فقرة"
+      },
+      "academic": {
+        "en": "connected with study at a college",
+        "ar": "أكاديمي"
+      },
+      "progress": {
+        "en": "movement forward, improvement",
+        "ar": "تقدّم"
+      },
+      "rehearsed": {
+        "en": "practiced a talk before the real time",
+        "ar": "تدرّب / تمرّن"
+      },
+      "improve": {
+        "en": "to become better",
+        "ar": "يتحسّن"
+      },
+      "opinion": {
+        "en": "what a person thinks about something",
+        "ar": "رأي"
+      },
+      "skill": {
+        "en": "something you can do well after practice",
+        "ar": "مهارة"
+      },
+      "vocabulary": {
+        "en": "the words of a language",
+        "ar": "مفردات"
+      }
+    },
+    "questions": [
+      {
+        "q": "What is Omar going to do at the club?",
+        "o": [
+          "Read a long article",
+          "Teach a new unit",
+          "Review his notes",
+          "Give a short talk"
+        ],
+        "a": 3,
+        "why": "He says <b>I'm going to give a short talk at the club</b>.",
+        "whyAr": "يقول إنه سيقدّم عرضًا قصيرًا في النادي."
+      },
+      {
+        "q": "Why does Huda think weekly practice is important?",
+        "o": [
+          "Because regular practice improves English quickly",
+          "Because the course is only thirty days",
+          "Because reading is harder than speaking",
+          "Because the club meets on Sunday"
+        ],
+        "a": 0,
+        "why": "She says <b>If you practice every week, your English will improve quickly</b>.",
+        "whyAr": "تقول إن التدرّب كل أسبوع يُحسّن الإنجليزية بسرعة."
+      },
+      {
+        "q": "<i>We've finished thirty days.</i> Which tense is this?",
+        "o": [
+          "past simple",
+          "present perfect",
+          "present continuous",
+          "future with will"
+        ],
+        "a": 1,
+        "why": "<b>Have</b> or <b>has</b> plus the past participle is the present perfect.",
+        "whyAr": "تركيب have أو has مع التصريف الثالث هو المضارع التام."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in groups of three. Say what you have learned and what you will do next.",
+      "promptAr": "تدرّبوا على الحوار في مجموعات من ثلاثة، واذكروا ما تعلمتموه وما ستفعلونه بعد ذلك."
+    }
   },
   quiz: [
     {

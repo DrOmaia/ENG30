@@ -5,7 +5,7 @@ DAYS[27] = {
   titleAr: "بناء الفقرة",
   goal: "I can plan and write a clear paragraph with a topic sentence, supporting details and a concluding sentence.",
   goalAr: "أستطيع تخطيط فقرة واضحة وكتابتها بجملة رئيسية وتفاصيل داعمة وجملة ختامية.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 8, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "reader", pos: "noun", ex: "A good writer thinks about the reader.", ar: "قارئ" },
     { en: "title", pos: "noun", ex: "The title of my paragraph is \"A Healthy Habit.\"", ar: "عنوان" },
@@ -16,7 +16,9 @@ DAYS[27] = {
     { en: "organize", pos: "verb", ex: "Organize your ideas before you start writing.", ar: "ينظّم" },
     { en: "conclusion", pos: "noun", ex: "The conclusion repeats the main idea in new words.", ar: "خاتمة" },
     { en: "support", pos: "verb", ex: "Examples support your main idea.", ar: "يدعم" },
-    { en: "relevant", pos: "adjective", ex: "Every sentence must be relevant to the topic.", ar: "ذو صلة بالموضوع" }
+    { en: "relevant", pos: "adjective", ex: "Every sentence must be relevant to the topic.", ar: "ذو صلة بالموضوع" },
+    { en: "summarize", pos: "verb", ex: "Please summarize the article in three sentences.", ar: "يُلخّص" },
+    { en: "source", pos: "noun", ex: "I named my source at the end of the paragraph.", ar: "مصدر" }
   ],
   reading: {
     title: "A model paragraph: walking",
@@ -82,6 +84,118 @@ DAYS[27] = {
     ],
     model: "Reading every day is a very good habit for students. First, it improves your vocabulary. For example, when you read a short article, you meet new words and see how people use them in sentences. Reading also helps you write better because you learn how good writers organize their ideas. In addition, reading is relaxing. Twenty minutes with a book in the evening can reduce stress after a long day at university. It is also cheap because you can borrow books from a library. Students who read regularly usually feel more confident when they speak and write. For these reasons, every student should read a little every day.",
     aiPrompt: "I am learning English at level B1. Please check my paragraph about a good habit for students. Tell me if it has a clear topic sentence, useful supporting details, one example and a concluding sentence. Correct the grammar and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "The shape of your paragraph",
+    "titleAr": "شكل فقرتك",
+    "setting": "A teacher gives a student feedback on the structure of a draft.",
+    "settingAr": "معلّمة تقدّم لطالب ملاحظات على بنية مسوّدته.",
+    "lines": [
+      {
+        "speaker": "Dr. Rana",
+        "text": "Sam, I've read your draft. The structure needs some work."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Where exactly is the problem?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Your main idea is in the last line. Put it first."
+      },
+      {
+        "speaker": "Sam",
+        "text": "So the first sentence introduces the topic?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Yes. Then two or three sentences support it with clear examples."
+      },
+      {
+        "speaker": "Sam",
+        "text": "And at the end I summarize the same idea?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Exactly. Use a short conclusion. Also name your source for the numbers."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Thank you. I've learned a lot from your feedback."
+      }
+    ],
+    "gloss": {
+      "draft": {
+        "en": "an early version of a text",
+        "ar": "مسوّدة"
+      },
+      "structure": {
+        "en": "the way the parts are put together",
+        "ar": "بنية / هيكل"
+      },
+      "introduces": {
+        "en": "presents something for the first time",
+        "ar": "يُقدّم"
+      },
+      "support": {
+        "en": "to give reasons or examples for an idea",
+        "ar": "يدعم"
+      },
+      "summarize": {
+        "en": "to say the main idea in a few words",
+        "ar": "يُلخّص"
+      },
+      "conclusion": {
+        "en": "the last part that closes a text",
+        "ar": "خاتمة"
+      },
+      "source": {
+        "en": "the place where information comes from",
+        "ar": "مصدر"
+      }
+    },
+    "questions": [
+      {
+        "q": "Where should Sam put his main idea?",
+        "o": [
+          "In the last line",
+          "In the conclusion",
+          "In the first sentence",
+          "In the title"
+        ],
+        "a": 2,
+        "why": "Dr. Rana says <b>Your main idea is in the last line. Put it first</b>.",
+        "whyAr": "تقول د. رنا إن فكرته الرئيسية في السطر الأخير، وعليه أن يضعها أولًا."
+      },
+      {
+        "q": "Why does Dr. Rana ask for a source?",
+        "o": [
+          "Because the draft is too short",
+          "Because Sam has no conclusion",
+          "Because the topic is difficult",
+          "Because the numbers need a reference"
+        ],
+        "a": 3,
+        "why": "A reader needs to know where the numbers come from.",
+        "whyAr": "القارئ يحتاج أن يعرف من أين جاءت الأرقام."
+      },
+      {
+        "q": "<i>I've learned a lot.</i> This tense connects the past to ___",
+        "o": [
+          "the present",
+          "next year",
+          "last week",
+          "a daily habit"
+        ],
+        "a": 0,
+        "why": "The present perfect links a past action to the present result.",
+        "whyAr": "المضارع التام يربط حدثًا ماضيًا بنتيجته في الحاضر."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Describe the shape of your last paragraph.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وصف شكل فقرتك الأخيرة."
+    }
   },
   quiz: [
     {

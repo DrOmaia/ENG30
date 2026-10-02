@@ -5,7 +5,7 @@ DAYS[2] = {
   titleAr: "يومي الدراسي",
   goal: "I can talk about my daily routine and say how often I do things.",
   goalAr: "أستطيع أن أتحدث عن روتيني اليومي وأقول كم مرة أفعل الأشياء.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "breakfast", pos: "noun", ex: "I always eat breakfast at 7:00.", ar: "وجبة الإفطار" },
     { en: "morning", pos: "noun", ex: "I study in the morning.", ar: "الصباح" },
@@ -16,7 +16,9 @@ DAYS[2] = {
     { en: "early", pos: "adverb", ex: "My brother wakes up early.", ar: "مبكرًا" },
     { en: "usually", pos: "adverb", ex: "I usually study after dinner.", ar: "عادةً" },
     { en: "sometimes", pos: "adverb", ex: "Sometimes we walk to school.", ar: "أحيانًا" },
-    { en: "never", pos: "adverb", ex: "He never drinks coffee at night.", ar: "أبدًا" }
+    { en: "never", pos: "adverb", ex: "He never drinks coffee at night.", ar: "أبدًا" },
+    { en: "alarm", pos: "noun", ex: "My alarm rings at five thirty.", ar: "منبّه" },
+    { en: "routine", pos: "noun", ex: "A simple routine helps me study.", ar: "روتين" }
   ],
   reading: {
     title: "Huda's day",
@@ -88,6 +90,114 @@ In the evening, I sometimes study at the library. I always write new words in my
     ],
     model: "My name is Tariq. I wake up at 7:00. I usually eat breakfast with my sister. She studies medicine, and she always leaves early. I take the bus to the university. I have two lessons in the morning. I sometimes study in the evening. I never study at night, and I don't drink coffee after dinner.",
     aiPrompt: "I am an A2 English learner. Please check this text about my daily routine. Correct the present simple (-s and -es), don't and doesn't, and the place of always, usually, sometimes and never. Explain each correction simply: [paste your text here]"
+  },
+  dialogue: {
+    "title": "What time do you get up?",
+    "titleAr": "في أي ساعة تستيقظ؟",
+    "setting": "Two classmates talk about their daily routine on the way to class.",
+    "settingAr": "زميلتان تتحدثان عن روتينهما اليومي في الطريق إلى الصف.",
+    "lines": [
+      {
+        "speaker": "Lina",
+        "text": "What time do you get up, Sara?"
+      },
+      {
+        "speaker": "Sara",
+        "text": "I get up at six. My alarm is very loud."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Do you eat breakfast at home?"
+      },
+      {
+        "speaker": "Sara",
+        "text": "Yes, I usually eat at home. I rarely skip it."
+      },
+      {
+        "speaker": "Lina",
+        "text": "How do you get to class?"
+      },
+      {
+        "speaker": "Sara",
+        "text": "I take the bus. It takes thirty minutes."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Is your routine the same every day?"
+      },
+      {
+        "speaker": "Sara",
+        "text": "No. On Thursday I study in the library."
+      }
+    ],
+    "gloss": {
+      "alarm": {
+        "en": "a clock that makes a sound to wake you",
+        "ar": "منبّه"
+      },
+      "breakfast": {
+        "en": "the first meal of the day",
+        "ar": "فطور"
+      },
+      "usually": {
+        "en": "most days, almost always",
+        "ar": "عادةً"
+      },
+      "rarely": {
+        "en": "almost never",
+        "ar": "نادرًا"
+      },
+      "bus": {
+        "en": "a big vehicle for many people",
+        "ar": "حافلة"
+      },
+      "routine": {
+        "en": "the things you do every day in the same order",
+        "ar": "روتين"
+      }
+    },
+    "questions": [
+      {
+        "q": "What time does Sara get up?",
+        "o": [
+          "At seven",
+          "At eight",
+          "At nine",
+          "At six"
+        ],
+        "a": 3,
+        "why": "Sara says <b>I get up at six</b>.",
+        "whyAr": "تقول سارة إنها تستيقظ في السادسة."
+      },
+      {
+        "q": "Why does Sara mention Thursday?",
+        "o": [
+          "Because her routine is different on that day",
+          "Because she has no classes that week",
+          "Because she gets up late every day",
+          "Because the bus is free"
+        ],
+        "a": 0,
+        "why": "On Thursday she studies in the library, so the day is not the same.",
+        "whyAr": "في يوم الخميس تدرس في المكتبة، لذلك يختلف هذا اليوم عن بقية الأيام."
+      },
+      {
+        "q": "Which question is correct?",
+        "o": [
+          "You eat breakfast at home?",
+          "Do you eat breakfast at home?",
+          "Do you eats breakfast at home?",
+          "Does you eat breakfast at home?"
+        ],
+        "a": 1,
+        "why": "With <b>you</b> we use <b>do</b> plus the base verb: <b>Do you eat</b>?",
+        "whyAr": "مع you نستخدم do ثم الفعل الأساسي: Do you eat؟"
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the times and the days.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر الأوقات والأيام."
+    }
   },
   quiz: [
     {

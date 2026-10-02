@@ -5,7 +5,7 @@ DAYS[22] = {
   titleAr: "تقديم النصيحة",
   goal: "I can ask for and give advice with should, must and have to, and write a short advice email.",
   goalAr: "أستطيع طلب النصيحة وتقديمها باستخدام should وmust وhave to، وكتابة رسالة نصيحة قصيرة.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 3, write: 6, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "advice", pos: "noun", ex: "Can I ask you for some advice?", ar: "نصيحة" },
     { en: "habit", pos: "noun", ex: "Reading every night is a good habit.", ar: "عادة" },
@@ -16,7 +16,9 @@ DAYS[22] = {
     { en: "healthy", pos: "adjective", ex: "Fruit and vegetables are healthy food.", ar: "صحي" },
     { en: "exercise", pos: "noun", ex: "Exercise is good for your body.", ar: "تمرين رياضي" },
     { en: "schedule", pos: "noun", ex: "My schedule is full on Monday.", ar: "جدول" },
-    { en: "sleep", pos: "noun", ex: "Students need enough sleep.", ar: "نوم" }
+    { en: "sleep", pos: "noun", ex: "Students need enough sleep.", ar: "نوم" },
+    { en: "manage", pos: "verb", ex: "I manage my time with a simple list.", ar: "يُدير / ينظّم" },
+    { en: "balance", pos: "verb", ex: "She balances work and study well.", ar: "يوازن" }
   ],
   reading: {
     title: "An email from Karim",
@@ -83,6 +85,114 @@ DAYS[22] = {
     ],
     model: "Hi Sam,\n\nThanks for your message. I'm sorry you feel so much pressure. First, you should make a study schedule and study a little every day. You shouldn't stay up all night because you need enough sleep. Also, you should walk for twenty minutes after dinner. About money, you have to make a budget this month, and you shouldn't buy things you don't need. You don't have to answer me quickly, but please tell me how you are.\n\nBest wishes,\nOmar",
     aiPrompt: "I am learning English at level B1. Please check my short advice email. Correct the grammar, especially should, shouldn't, must, mustn't, have to and the base verb after them. Explain each mistake in simple words and show me a better version. My email: [paste your email here]"
+  },
+  dialogue: {
+    "title": "Three tasks in one week",
+    "titleAr": "ثلاث مهام في أسبوع واحد",
+    "setting": "A student asks a tutor for advice about managing her time.",
+    "settingAr": "طالبة تطلب من المدرّس المساعد نصيحة في تنظيم وقتها.",
+    "lines": [
+      {
+        "speaker": "Layla",
+        "text": "Karim, I have three tasks this week. What should I do?"
+      },
+      {
+        "speaker": "Karim",
+        "text": "You should write a list and give each task a priority."
+      },
+      {
+        "speaker": "Layla",
+        "text": "I must finish the lab report first. It is the hardest one."
+      },
+      {
+        "speaker": "Karim",
+        "text": "Then you have to start it today. Don't leave it until Thursday."
+      },
+      {
+        "speaker": "Layla",
+        "text": "How do I manage my time in the evening?"
+      },
+      {
+        "speaker": "Karim",
+        "text": "Work for fifty minutes, then rest for ten. You must put your phone away."
+      },
+      {
+        "speaker": "Layla",
+        "text": "That is hard, but I will try tonight."
+      },
+      {
+        "speaker": "Karim",
+        "text": "You should also balance study and sleep. Tired students work slowly."
+      }
+    ],
+    "gloss": {
+      "tasks": {
+        "en": "pieces of work that you must do",
+        "ar": "مهام"
+      },
+      "priority": {
+        "en": "the thing that is most important first",
+        "ar": "أولوية"
+      },
+      "report": {
+        "en": "a written text with facts and results",
+        "ar": "تقرير"
+      },
+      "manage": {
+        "en": "to organize and control something",
+        "ar": "يُدير"
+      },
+      "balance": {
+        "en": "to give fair time to two things",
+        "ar": "يوازن"
+      },
+      "rest": {
+        "en": "to stop and relax",
+        "ar": "يستريح"
+      }
+    },
+    "questions": [
+      {
+        "q": "Which task is the hardest for Layla?",
+        "o": [
+          "The reading task",
+          "The group project",
+          "The vocabulary list",
+          "The lab report"
+        ],
+        "a": 3,
+        "why": "She says <b>I must finish the lab report first. It is the hardest one</b>.",
+        "whyAr": "تقول إن تقرير المختبر هو الأصعب ويجب أن تنهيه أولًا."
+      },
+      {
+        "q": "Why does Karim mention sleep?",
+        "o": [
+          "Because tired students work more slowly",
+          "Because Layla sleeps in class",
+          "Because sleep is a task on her list",
+          "Because the report is about sleep"
+        ],
+        "a": 0,
+        "why": "He says <b>Tired students work slowly</b>, so sleep protects her work.",
+        "whyAr": "يقول إن الطلاب المتعبين يعملون ببطء، فالنوم يحمي جودة العمل."
+      },
+      {
+        "q": "You ___ put your phone away while you study.",
+        "o": [
+          "must to",
+          "must",
+          "musts",
+          "are must"
+        ],
+        "a": 1,
+        "why": "After <b>must</b> we use the base verb with no <b>to</b>.",
+        "whyAr": "بعد must نستخدم الفعل الأساسي بدون to."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Give three pieces of advice with should.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وقدّم ثلاث نصائح باستخدام should."
+    }
   },
   quiz: [
     {

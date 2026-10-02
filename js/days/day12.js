@@ -5,7 +5,7 @@ DAYS[12] = {
   titleAr: "ماذا حدث أمس",
   goal: "I can ask and answer simple questions about yesterday and last week.",
   goalAr: "أستطيع أن أطرح أسئلة بسيطة وأجيب عنها حول أمس والأسبوع الماضي.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 5, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "invite", pos: "verb", ex: "She invited her cousins to lunch.", ar: "يدعو" },
     { en: "visit", pos: "verb", ex: "We visited my aunt last weekend.", ar: "يزور" },
@@ -16,7 +16,9 @@ DAYS[12] = {
     { en: "arrive", pos: "verb", ex: "The train arrived at six o'clock.", ar: "يصل" },
     { en: "order", pos: "verb", ex: "We ordered tea and sandwiches.", ar: "يطلب (طعامًا)" },
     { en: "stay", pos: "verb", ex: "Did you stay at home last night?", ar: "يبقى" },
-    { en: "enjoy", pos: "verb", ex: "They enjoyed the meal.", ar: "يستمتع بـ" }
+    { en: "enjoy", pos: "verb", ex: "They enjoyed the meal.", ar: "يستمتع بـ" },
+    { en: "finish", pos: "verb", ex: "I finished the report before noon.", ar: "يُنهي" },
+    { en: "repair", pos: "verb", ex: "My father repaired the broken chair.", ar: "يُصلح" }
   ],
   reading: {
     title: "A busy Friday",
@@ -81,6 +83,126 @@ DAYS[12] = {
     ],
     model: "Yesterday was a quiet day. I cleaned my room in the morning. Then I cooked rice and chicken. I invited my sister for lunch, and she arrived at one o'clock. We enjoyed the food. I didn't study last night because I was tired. Did you have a good day yesterday?",
     aiPrompt: "I am learning English at level A2. Please check my short text about yesterday. Correct the grammar (especially did/didn't with the base verb and -ed endings), explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "I didn't hear my alarm",
+    "titleAr": "لم أسمع منبّهي",
+    "setting": "Two classmates talk about what they did yesterday evening.",
+    "settingAr": "زميلان يتحدثان عما فعلاه مساء أمس.",
+    "lines": [
+      {
+        "speaker": "Reem",
+        "text": "Omar, did you finish the homework yesterday?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "No, I didn't finish it. I was very tired."
+      },
+      {
+        "speaker": "Reem",
+        "text": "What did you do in the evening?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I helped my brother. He repaired his bike in the yard."
+      },
+      {
+        "speaker": "Reem",
+        "text": "Did you wake up late today?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes, I did. I didn't hear my alarm at six."
+      },
+      {
+        "speaker": "Reem",
+        "text": "Did you return the book to the library?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "No, I didn't. It's still in my bag."
+      },
+      {
+        "speaker": "Reem",
+        "text": "Okay. We can work together after the lesson."
+      },
+      {
+        "speaker": "Omar",
+        "text": "Thank you. I need two quiet hours for this task."
+      }
+    ],
+    "gloss": {
+      "finish": {
+        "en": "to complete something",
+        "ar": "يُنهي"
+      },
+      "tired": {
+        "en": "needing rest or sleep",
+        "ar": "متعَب"
+      },
+      "repaired": {
+        "en": "fixed a broken thing",
+        "ar": "أصلح"
+      },
+      "wake": {
+        "en": "to stop sleeping",
+        "ar": "يستيقظ"
+      },
+      "alarm": {
+        "en": "a clock that makes a sound to wake you",
+        "ar": "منبّه"
+      },
+      "return": {
+        "en": "to give something back",
+        "ar": "يُعيد"
+      },
+      "homework": {
+        "en": "school work that you do at home",
+        "ar": "واجب منزلي"
+      }
+    },
+    "questions": [
+      {
+        "q": "What did Omar's brother repair?",
+        "o": [
+          "His car",
+          "His bike",
+          "His bag",
+          "His clock"
+        ],
+        "a": 1,
+        "why": "Omar says <b>He repaired his bike in the yard</b>.",
+        "whyAr": "يقول عمر إن أخاه أصلح دراجته في فناء المنزل."
+      },
+      {
+        "q": "Why did Omar wake up late?",
+        "o": [
+          "He went to the library",
+          "He worked with Reem",
+          "He did not hear his alarm",
+          "He lost his bag"
+        ],
+        "a": 2,
+        "why": "He says <b>I didn't hear my alarm at six</b>.",
+        "whyAr": "يقول إنه لم يسمع منبّهه في السادسة."
+      },
+      {
+        "q": "I ___ finish the homework yesterday.",
+        "o": [
+          "don't",
+          "wasn't",
+          "not",
+          "didn't"
+        ],
+        "a": 3,
+        "why": "For a past negative we use <b>didn't</b> plus the base verb.",
+        "whyAr": "في النفي في الماضي نستخدم didn't ثم الفعل الأساسي."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Ask three questions with did.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واطرح ثلاثة أسئلة بـ did."
+    }
   },
   quiz: [
     {

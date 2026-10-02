@@ -5,7 +5,7 @@ DAYS[16] = {
   titleAr: "قراءة مقالة قصيرة",
   goal: "I can skim a short article for the main idea, scan it for details and guess new words from context.",
   goalAr: "أستطيع قراءة مقالة قصيرة قراءة سريعة لفهم فكرتها العامة، والبحث فيها عن التفاصيل، وتخمين معاني الكلمات الجديدة من السياق.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 7, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "skim", pos: "verb", ex: "I skim the title and the first lines before I read.", ar: "يقرأ قراءة سريعة لفهم الفكرة الرئيسية" },
     { en: "scan", pos: "verb", ex: "Scan the text to find the year.", ar: "يمسح النص بحثًا عن معلومة محددة" },
@@ -16,7 +16,9 @@ DAYS[16] = {
     { en: "guess", pos: "verb", ex: "You can guess a new word from the other words.", ar: "يخمّن" },
     { en: "context", pos: "noun", ex: "The context helps me understand the word.", ar: "سياق" },
     { en: "sentence", pos: "noun", ex: "The first sentence tells you the topic.", ar: "جملة" },
-    { en: "headline", pos: "noun", ex: "The headline is big, so it is easy to see.", ar: "عنوان رئيسي" }
+    { en: "headline", pos: "noun", ex: "The headline is big, so it is easy to see.", ar: "عنوان رئيسي" },
+    { en: "paragraph", pos: "noun", ex: "The second paragraph gives two examples.", ar: "فقرة" },
+    { en: "detail", pos: "noun", ex: "I am looking for one small detail in the text.", ar: "تفصيل" }
   ],
   reading: {
     title: "Sleep and studying",
@@ -82,6 +84,126 @@ DAYS[16] = {
     ],
     model: "The article is about sleep and studying. The main idea is that good sleep helps students learn. First, sleep helps the brain store new information. Second, students who slept eight hours had good test scores, but students who slept five hours had low scores. Sleep also helps memory and attention. The writer gives some advice: go to bed at the same time every night and turn off your phone before bed.",
     aiPrompt: "I am learning English at level B1. Please check my short summary of an article. Tell me if I included the main idea and two details, correct my grammar, explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Don't read every word",
+    "titleAr": "لا تقرأ كل كلمة",
+    "setting": "A teacher shows a student how to read an article faster.",
+    "settingAr": "معلّمة تُبيّن لطالب كيف يقرأ مقالة بسرعة أكبر.",
+    "lines": [
+      {
+        "speaker": "Hamza",
+        "text": "Dr. Rana, this passage is long. I'm reading every word."
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Don't do that. Skim it first for the main idea."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "How do I find the purpose of the writer?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Read the first sentence of each paragraph carefully."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "I see. And how do I find the small details?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Scan for numbers and names. You don't need every word."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Can I predict the topic from the headline?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Yes. A good headline always gives you a clue."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Thank you. This method is much faster for me."
+      }
+    ],
+    "gloss": {
+      "passage": {
+        "en": "a short part of a text",
+        "ar": "مقطع نصّي"
+      },
+      "skim": {
+        "en": "to read fast for the general idea",
+        "ar": "يقرأ قراءة سريعة"
+      },
+      "paragraph": {
+        "en": "a group of sentences about one idea",
+        "ar": "فقرة"
+      },
+      "details": {
+        "en": "the small pieces of information",
+        "ar": "تفاصيل"
+      },
+      "scan": {
+        "en": "to look quickly for one piece of information",
+        "ar": "يمسح النص بحثًا عن معلومة"
+      },
+      "predict": {
+        "en": "to guess something before you know it",
+        "ar": "يتوقّع"
+      },
+      "headline": {
+        "en": "the title of an article",
+        "ar": "عنوان رئيسي"
+      },
+      "clue": {
+        "en": "a piece of information that helps you understand",
+        "ar": "دليل / إشارة"
+      }
+    },
+    "questions": [
+      {
+        "q": "What should Hamza read to find the writer's purpose?",
+        "o": [
+          "The last word of the text",
+          "The first sentence of each paragraph",
+          "The numbers in the article",
+          "The name of the writer"
+        ],
+        "a": 1,
+        "why": "Dr. Rana says <b>Read the first sentence of each paragraph</b>.",
+        "whyAr": "تقول د. رنا: اقرأ الجملة الأولى من كل فقرة."
+      },
+      {
+        "q": "Why does Dr. Rana tell Hamza not to read every word?",
+        "o": [
+          "Because the passage is very easy",
+          "Because the words are wrong",
+          "Because it is slow and not necessary",
+          "Because he has no dictionary"
+        ],
+        "a": 2,
+        "why": "Skimming and scanning give the information faster than reading every word.",
+        "whyAr": "القراءة السريعة والمسح يوصلان إلى المعلومة أسرع من قراءة كل كلمة."
+      },
+      {
+        "q": "Hamza says <i>I'm reading every word</i>. This tense shows an action ___",
+        "o": [
+          "finished yesterday",
+          "in the future",
+          "that never happens",
+          "happening now"
+        ],
+        "a": 3,
+        "why": "The present continuous describes an action at this moment.",
+        "whyAr": "المضارع المستمر يصف حدثًا يجري في هذه اللحظة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Use a real article and skim it in one minute.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واقرأ مقالة حقيقية قراءة سريعة في دقيقة واحدة."
+    }
   },
   quiz: [
     {

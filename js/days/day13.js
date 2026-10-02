@@ -5,7 +5,7 @@ DAYS[13] = {
   titleAr: "رحلة أتذكّرها",
   goal: "I can tell a short story about a trip using common irregular past verbs.",
   goalAr: "أستطيع أن أروي قصة قصيرة عن رحلة باستخدام أفعال ماضٍ شاذّة شائعة.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 5, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "went", pos: "verb (past of go)", ex: "We went to Istanbul last summer.", ar: "ذهب" },
     { en: "saw", pos: "verb (past of see)", ex: "I saw a beautiful old mosque there.", ar: "رأى" },
@@ -17,7 +17,8 @@ DAYS[13] = {
     { en: "came", pos: "verb (past of come)", ex: "A man came to our table.", ar: "جاء" },
     { en: "gave", pos: "verb (past of give)", ex: "They gave us a map of the city.", ar: "أعطى" },
     { en: "made", pos: "verb (past of make)", ex: "My sister made a short video.", ar: "صنع" },
-    { en: "got", pos: "verb (past of get)", ex: "We got a taxi at the station.", ar: "حصل على / أخذ (سيارة أجرة)" }
+    { en: "got", pos: "verb (past of get)", ex: "We got a taxi at the station.", ar: "حصل على / أخذ (سيارة أجرة)" },
+    { en: "found", pos: "verb (past of find)", ex: "I found my notebook under the desk.", ar: "وجد" }
   ],
   reading: {
     title: "Two days in Istanbul",
@@ -83,6 +84,130 @@ DAYS[13] = {
     ],
     model: "Last spring, I went to Cairo with my family. First, we took a train from Alexandria. We had a small apartment near the river. Then we saw the old market and bought some gifts. After that, we ate dinner at a small restaurant. I didn't take many photos, but I made a few videos. Finally, we got a taxi to the station and came home.",
     aiPrompt: "I am learning English at level A2. Please check my short story about a trip. Correct the grammar (especially irregular past verbs and did/didn't with the base verb), explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "A weekend in Istanbul",
+    "titleAr": "نهاية أسبوع في إسطنبول",
+    "setting": "Two friends talk about a short trip last weekend.",
+    "settingAr": "صديقان يتحدثان عن رحلة قصيرة في نهاية الأسبوع الماضي.",
+    "lines": [
+      {
+        "speaker": "Karim",
+        "text": "Hana, where did you go last weekend?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "I went to Istanbul with my sister for three days."
+      },
+      {
+        "speaker": "Karim",
+        "text": "Nice! What did you see there?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "We saw the old city. I took many photos of the sea."
+      },
+      {
+        "speaker": "Karim",
+        "text": "Did you buy anything for your family?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "I bought a small gift for my mother."
+      },
+      {
+        "speaker": "Karim",
+        "text": "Who did you meet in the city?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "We met my cousin. She brought us sweets from her home."
+      },
+      {
+        "speaker": "Karim",
+        "text": "Did you speak English there?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "Yes. I spoke English at the hotel, and the staff taught me two words."
+      }
+    ],
+    "gloss": {
+      "went": {
+        "en": "past of go",
+        "ar": "ذهب"
+      },
+      "saw": {
+        "en": "past of see",
+        "ar": "رأى"
+      },
+      "took": {
+        "en": "past of take",
+        "ar": "أخذ"
+      },
+      "bought": {
+        "en": "past of buy",
+        "ar": "اشترى"
+      },
+      "met": {
+        "en": "past of meet",
+        "ar": "قابل"
+      },
+      "brought": {
+        "en": "past of bring",
+        "ar": "أحضر"
+      },
+      "spoke": {
+        "en": "past of speak",
+        "ar": "تحدّث"
+      },
+      "taught": {
+        "en": "past of teach",
+        "ar": "علّم"
+      }
+    },
+    "questions": [
+      {
+        "q": "Who did Hana travel with?",
+        "o": [
+          "Her sister",
+          "Her cousin",
+          "Her mother",
+          "Karim"
+        ],
+        "a": 0,
+        "why": "She says <b>I went to Istanbul with my sister</b>.",
+        "whyAr": "تقول إنها ذهبت إلى إسطنبول مع أختها."
+      },
+      {
+        "q": "Why was the trip useful for Hana's English?",
+        "o": [
+          "She bought an English book",
+          "She spoke English with the hotel staff",
+          "She studied in a school there",
+          "She met an English teacher"
+        ],
+        "a": 1,
+        "why": "She spoke English at the hotel, and the staff taught her new words.",
+        "whyAr": "تحدّثت الإنجليزية في الفندق، وعلّمها الموظفون كلمتين جديدتين."
+      },
+      {
+        "q": "What is the past form of <b>buy</b>?",
+        "o": [
+          "buyed",
+          "buys",
+          "bought",
+          "buying"
+        ],
+        "a": 2,
+        "why": "<b>Buy</b> is irregular: buy - bought.",
+        "whyAr": "الفعل buy شاذّ: buy - bought."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the city and the gift.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر المدينة والهدية."
+    }
   },
   quiz: [
     {

@@ -4,7 +4,7 @@ DAYS[10] = {
   title: "Review: Campus and daily life", titleAr: "مراجعة: الجامعة والحياة اليومية",
   goal: "I can describe my campus, give simple directions, and ask for help politely.",
   goalAr: "أستطيع أن أصف حرمي الجامعي، وأعطي توجيهات بسيطة، وأطلب المساعدة بأدب.",
-  plan: { read: 4, listen: 4, speak: 4, write: 6, quiz: 5, recap: 3 },
+  plan: { read: 4, recap: 3, listen: 4, dialogue: 4, speak: 4, write: 6, quiz: 5 },
   recap: {
     title: "Unit 2 at a glance",
     titleAr: "لمحة عن الوحدة 2",
@@ -71,6 +71,130 @@ DAYS[10] = {
     ],
     model: "My campus is big. There is a library near the gate, and there are three cafeterias. There isn't any parking next to the library. To get to the clinic, go straight and turn right at the bank. It is between the bank and the pharmacy. How many students are there in your class? Can you tell me about your campus?",
     aiPrompt: "I am an A2 English learner. Please check my description of a campus. Correct my grammar (there is/are, prepositions of place, imperatives, some/any, how many/how much, can/can't). Show each correction and explain it in one short sentence. Here is my text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "On the way to the pharmacy",
+    "titleAr": "في الطريق إلى الصيدلية",
+    "setting": "Two students walk on campus and talk about places, prices and health.",
+    "settingAr": "طالبان يسيران في الحرم الجامعي ويتحدثان عن الأماكن والأسعار والصحة.",
+    "lines": [
+      {
+        "speaker": "Huda",
+        "text": "Hamza, is there a pharmacy near the main gate?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Yes, there is one opposite the parking lot."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Good. I need some medicine for a bad headache."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Can you walk there now? It isn't far."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Yes, I can. Is the medicine expensive there?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "No. The prices are low. Please take this map with you."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Thank you. How do I get there from the library?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Walk straight, then turn left at the second corner."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Are there benches near the pharmacy? I can rest there."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "There are two, between the two small shops. Call me, please."
+      }
+    ],
+    "gloss": {
+      "pharmacy": {
+        "en": "a shop for medicine",
+        "ar": "صيدلية"
+      },
+      "opposite": {
+        "en": "on the other side, face to face",
+        "ar": "مقابل"
+      },
+      "medicine": {
+        "en": "something you take when you are sick",
+        "ar": "دواء"
+      },
+      "headache": {
+        "en": "a pain in the head",
+        "ar": "صداع"
+      },
+      "prices": {
+        "en": "the money you pay for things",
+        "ar": "أسعار"
+      },
+      "map": {
+        "en": "a drawing of a place or a city",
+        "ar": "خريطة"
+      },
+      "benches": {
+        "en": "long seats for two or more people",
+        "ar": "مقاعد طويلة"
+      },
+      "rest": {
+        "en": "to stop and relax",
+        "ar": "يستريح"
+      }
+    },
+    "questions": [
+      {
+        "q": "Where is the pharmacy?",
+        "o": [
+          "Behind the gate",
+          "Between the shops",
+          "Next to the library",
+          "Opposite the parking lot"
+        ],
+        "a": 3,
+        "why": "Hamza says there is one <b>opposite the parking lot</b>.",
+        "whyAr": "يقول حمزة إنها مقابل موقف السيارات."
+      },
+      {
+        "q": "Why does Huda want to rest?",
+        "o": [
+          "She is not feeling well",
+          "She is late for class",
+          "She wants to buy a bench",
+          "She does not like walking"
+        ],
+        "a": 0,
+        "why": "She needs medicine for a headache, so she is not well.",
+        "whyAr": "هي تحتاج دواءً للصداع، أي إنها ليست بحال جيدة."
+      },
+      {
+        "q": "___ two benches between the shops.",
+        "o": [
+          "There is",
+          "There are",
+          "It are",
+          "Are there"
+        ],
+        "a": 1,
+        "why": "<b>Two benches</b> is plural, so we say <b>There are</b>.",
+        "whyAr": "عبارة two benches جمع، لذلك نقول There are."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in pairs. Change the place, the directions and the reason.",
+      "promptAr": "تدرّبا على الحوار في ثنائيات، وغيّرا المكان والإرشادات والسبب."
+    }
   },
   quiz: [
     {

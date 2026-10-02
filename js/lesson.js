@@ -9,6 +9,7 @@
     { id: "read", en: "Reading", ar: "القراءة", key: "reading" },
     { id: "focus", en: "Language focus", ar: "القاعدة اللغوية", key: "focus" },
     { id: "recap", en: "Recap", ar: "الملخّص", key: "recap" },
+    { id: "dialogue", en: "Dialogue", ar: "الحوار", key: "dialogue" },
     { id: "listen", en: "Listening", ar: "الاستماع", key: "listening" },
     { id: "speak", en: "Speaking", ar: "التحدّث", key: "speaking" },
     { id: "write", en: "Writing", ar: "الكتابة", key: "writing" },
@@ -99,6 +100,7 @@
     if (id === "read") return readHtml(D);
     if (id === "focus") return focusHtml(D);
     if (id === "recap") return recapHtml(D);
+    if (id === "dialogue") return dialogueHtml(D);
     if (id === "listen") return listenHtml(D);
     if (id === "speak") return speakHtml(D);
     if (id === "write") return writeHtml(D);
@@ -145,6 +147,27 @@
     return "<h3>" + esc(R.title) + "</h3>" + ar(R.titleAr) + '<div class="panel">' + R.points.map(function (p) {
       return '<div class="ex-row"><div><span lang="en">' + rich(p.en) + "</span>" + ar(p.ar) + "</div></div>";
     }).join("") + "</div>";
+  }
+
+  function dialogueHtml(D) {
+    var L = D.dialogue, gloss = {};
+    Object.keys(L.gloss || {}).forEach(function (k) { gloss[k.toLowerCase()] = L.gloss[k]; });
+    var speakers = []; L.lines.forEach(function (l) { if (speakers.indexOf(l.speaker) < 0) speakers.push(l.speaker); });
+    var lines = L.lines.map(function (l, i) {
+      var html = l.text.replace(/([A-Za-z]+(?:'[A-Za-z]+)?)|([^A-Za-z]+)/g, function (m, w, o) {
+        if (o) return esc(o);
+        return gloss[w.toLowerCase()] ? '<button type="button" class="gw" data-w="' + esc(w.toLowerCase()) + '" aria-expanded="false">' + esc(w) + "</button>" : esc(w);
+      });
+      return '<li class="dl" data-i="' + i + '" data-who="' + speakers.indexOf(l.speaker) + '"><b class="spk">' + esc(l.speaker) + ":</b> <span class=\"dlg-text\">" + html + "</span> " + audio(l.text, false) + "</li>";
+    }).join("");
+    return speechNote + "<h3>" + esc(L.title) + "</h3>" + ar(L.titleAr) + "<p>" + esc(L.setting) + "</p>" + ar(L.settingAr) +
+      '<div class="btn-row no-print"><button type="button" class="btn btn-soft btn-sm" id="dlg-all">Play the whole dialogue</button><button type="button" class="btn btn-ghost btn-sm" id="dlg-hide" aria-pressed="false">Hide the text and just listen</button></div>' +
+      '<ol class="dlg reading" id="dlg-lines" lang="en">' + lines + "</ol>" +
+      '<div class="gloss-panel no-print" id="dgloss" aria-live="polite"><span class="muted">Tap a highlighted word to see its meaning.</span>' + ar("اضغط على كلمة مظلّلة لترى معناها.") + "</div>" +
+      "<h3>Check your understanding</h3>" + '<div id="dq">' + L.questions.map(function (q, i) {
+        return '<fieldset class="q" data-i="' + i + '"><legend>' + (i + 1) + ". " + rich(q.q) + '</legend><div class="opts">' + q.o.map(function (o, j) { return '<button type="button" class="opt" data-j="' + j + '">' + rich(o) + "</button>"; }).join("") + '</div><div class="explain" aria-live="polite"></div></fieldset>';
+      }).join("") + '</div><div class="score-bar" id="dscore" aria-live="polite"></div>' +
+      (L.roleplay ? '<div class="callout"><div class="ttl">Role-play</div><p>' + rich(L.roleplay.prompt) + "</p>" + ar(L.roleplay.promptAr) + "</div>" : "");
   }
 
   function listenHtml(D) {
@@ -210,6 +233,56 @@
         var g = gloss[b.dataset.w];
         root.querySelector("#gloss").innerHTML = '<span class="gw-word" lang="en">' + esc(b.textContent) + "</span> " + audio(b.textContent, false) +
           "<div>" + rich(g.en) + "</div>" + ar(g.ar);
+      });
+    }
+    // dialogue
+    var dl = root.querySelector("#dlg-lines");
+    if (dl) {
+      var DG = {}; Object.keys(D.dialogue.gloss || {}).forEach(function (k) { DG[k.toLowerCase()] = D.dialogue.gloss[k]; });
+      dl.addEventListener("click", function (e) {
+        var b = e.target.closest(".gw"); if (!b) return;
+        dl.querySelectorAll(".gw[aria-expanded=true]").forEach(function (x) { x.setAttribute("aria-expanded", "false"); });
+        b.setAttribute("aria-expanded", "true");
+        var g = DG[b.dataset.w];
+        root.querySelector("#dgloss").innerHTML = '<span class="gw-word" lang="en">' + esc(b.textContent) + "</span> " + audio(b.textContent, false) + "<div>" + rich(g.en) + "</div>" + ar(g.ar);
+      });
+      var allBtn = root.querySelector("#dlg-all"), hideBtn = root.querySelector("#dlg-hide");
+      var items = D.dialogue.lines.map(function (l, i) { return { text: l.text, who: +dl.children[i].dataset.who }; });
+      var clear = function () { dl.querySelectorAll(".dl.now").forEach(function (x) { x.classList.remove("now"); }); allBtn.textContent = "Play the whole dialogue"; allBtn.setAttribute("aria-pressed", "false"); };
+      allBtn.onclick = function () {
+        if (allBtn.getAttribute("aria-pressed") === "true") { E.speech.stop(); clear(); return; }
+        allBtn.setAttribute("aria-pressed", "true"); allBtn.textContent = "Stop";
+        E.speech.speakSeq(items, false, { line: function (i) { dl.querySelectorAll(".dl.now").forEach(function (x) { x.classList.remove("now"); }); dl.children[i].classList.add("now"); }, done: clear });
+      };
+      hideBtn.onclick = function () {
+        var on = hideBtn.getAttribute("aria-pressed") !== "true";
+        hideBtn.setAttribute("aria-pressed", on ? "true" : "false"); dl.classList.toggle("dlg-hidden", on);
+        hideBtn.textContent = on ? "Show the text" : "Hide the text and just listen";
+      };
+      var dq = root.querySelector("#dq"), dans = {}, dright = 0, dsc = root.querySelector("#dscore"), dQ = D.dialogue.questions;
+      var dshow = function () {
+        var c = Object.keys(dans).length;
+        if (c < dQ.length) { dsc.textContent = c + " of " + dQ.length + " answered."; return; }
+        dsc.innerHTML = "Score: " + dright + " of " + dQ.length + ' <button type="button" class="btn btn-soft btn-sm" id="dretry">Try again</button>';
+        root.querySelector("#dretry").onclick = function () {
+          dans = {}; dright = 0;
+          dq.querySelectorAll(".opt").forEach(function (o) { o.disabled = false; o.classList.remove("right", "wrong"); var sr = o.querySelector(".sr-only"); if (sr) sr.remove(); });
+          dq.querySelectorAll(".explain").forEach(function (x) { x.innerHTML = ""; });
+          dshow(); var f1 = dq.querySelector(".opt"); if (f1) f1.focus();
+        };
+      };
+      dshow();
+      dq.addEventListener("click", function (e) {
+        var o = e.target.closest(".opt"); if (!o || o.disabled) return;
+        var f = o.closest(".q"), i = +f.dataset.i, q = dQ[i], j = +o.dataset.j;
+        dans[i] = j; if (j === q.a) dright++;
+        f.querySelectorAll(".opt").forEach(function (b, k) {
+          b.disabled = true;
+          if (k === q.a) { b.classList.add("right"); b.insertAdjacentHTML("afterbegin", '<span class="sr-only">Correct answer: </span>'); }
+          else if (k === j) { b.classList.add("wrong"); b.insertAdjacentHTML("afterbegin", '<span class="sr-only">Your answer, not correct: </span>'); }
+        });
+        f.querySelector(".explain").innerHTML = "<p><b>" + (j === q.a ? "Correct." : "Not quite.") + "</b> " + rich(q.why) + "</p>" + ar(q.whyAr);
+        dshow();
       });
     }
     // dictation

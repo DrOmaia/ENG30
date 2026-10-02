@@ -4,7 +4,7 @@ DAYS[15] = {
   title: "Review: Learning and the past", titleAr: "مراجعة: التعلّم والماضي",
   goal: "I can tell a short story about my past using past simple, time expressions and linking words.",
   goalAr: "أستطيع أن أروي قصة قصيرة عن ماضيّ مستخدمًا الماضي البسيط وعبارات الزمن وكلمات الربط.",
-  plan: { read: 4, listen: 4, speak: 4, write: 7, quiz: 6, recap: 3 },
+  plan: { read: 4, recap: 3, listen: 4, dialogue: 4, speak: 4, write: 6, quiz: 5 },
   recap: {
     title: "Unit 3 at a glance",
     titleAr: "لمحة عن الوحدة 3",
@@ -72,6 +72,130 @@ DAYS[15] = {
     ],
     model: "When I was twelve, I started to learn English. I didn't like it at first because the words were difficult. I was not good at speaking, so I felt shy in class. My teacher gave me short stories, and I read one every night. Two years later, I passed my first exam. I was very happy because I worked hard.",
     aiPrompt: "I am learning English at level A2. Please check my short story about my past. Correct the grammar, especially past simple, irregular verbs, didn't, time expressions, and because, so and but. Explain each mistake in simple words and show a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "How was your week?",
+    "titleAr": "كيف كان أسبوعك؟",
+    "setting": "Three students talk about their study and travel last week.",
+    "settingAr": "ثلاثة طلاب يتحدثون عن دراستهم وسفرهم في الأسبوع الماضي.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "Omar, how was your week?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "It was busy. I studied for two exams and I visited my uncle."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Did you travel anywhere?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes, I went to Amman on Friday. I took the early bus."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Was the trip long?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Four hours, but I slept on the bus, so I wasn't tired."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Did you see your cousins there?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I met two of them. They gave me a book about old cities."
+      },
+      {
+        "speaker": "Sara",
+        "text": "I didn't rest last week. I cleaned the house and I cooked every day."
+      },
+      {
+        "speaker": "Huda",
+        "text": "We all worked hard, so we deserve a quiet weekend."
+      }
+    ],
+    "gloss": {
+      "studied": {
+        "en": "learned a subject",
+        "ar": "درس"
+      },
+      "visited": {
+        "en": "went to see a person or a place",
+        "ar": "زار"
+      },
+      "went": {
+        "en": "past of go",
+        "ar": "ذهب"
+      },
+      "took": {
+        "en": "past of take",
+        "ar": "أخذ"
+      },
+      "slept": {
+        "en": "past of sleep",
+        "ar": "نام"
+      },
+      "met": {
+        "en": "past of meet",
+        "ar": "قابل"
+      },
+      "gave": {
+        "en": "past of give",
+        "ar": "أعطى"
+      },
+      "deserve": {
+        "en": "should get because of your work",
+        "ar": "يستحق"
+      }
+    },
+    "questions": [
+      {
+        "q": "How long was Omar's trip to Amman?",
+        "o": [
+          "Two hours",
+          "Six hours",
+          "Four hours",
+          "One day"
+        ],
+        "a": 2,
+        "why": "Omar says <b>Four hours</b>.",
+        "whyAr": "يقول عمر إن الرحلة استغرقت أربع ساعات."
+      },
+      {
+        "q": "Why wasn't Omar tired after the trip?",
+        "o": [
+          "The trip was very short",
+          "He traveled by car",
+          "He rested at his uncle's house",
+          "He slept on the bus"
+        ],
+        "a": 3,
+        "why": "He says <b>I slept on the bus, so I wasn't tired</b>.",
+        "whyAr": "يقول إنه نام في الحافلة، لذلك لم يكن متعبًا."
+      },
+      {
+        "q": "I ___ rest last week.",
+        "o": [
+          "didn't",
+          "wasn't",
+          "not",
+          "don't"
+        ],
+        "a": 0,
+        "why": "For a past negative with a main verb we use <b>didn't</b> plus the base verb.",
+        "whyAr": "في النفي في الماضي مع فعل أساسي نستخدم didn't ثم الفعل الأساسي."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in groups of three. Talk about your real last week.",
+      "promptAr": "تدرّبوا على الحوار في مجموعات من ثلاثة، وتحدّثوا عن أسبوعكم الماضي الحقيقي."
+    }
   },
   quiz: [
     {

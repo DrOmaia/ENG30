@@ -5,7 +5,7 @@ DAYS[9] = {
   titleAr: "الصحة والخدمات",
   goal: "I can say what is wrong, ask politely for help, and make an appointment on campus.",
   goalAr: "أستطيع أن أقول ما المشكلة، وأطلب المساعدة بأدب، وأحجز موعدًا في الجامعة.",
-  plan: { words: 3, read: 4, focus: 5, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "headache", pos: "noun", ex: "I have a headache today.", ar: "صداع" },
     { en: "fever", pos: "noun", ex: "She has a fever and she is tired.", ar: "حمّى / ارتفاع الحرارة" },
@@ -16,7 +16,9 @@ DAYS[9] = {
     { en: "clinic", pos: "noun", ex: "The clinic is near the library.", ar: "عيادة" },
     { en: "pharmacy", pos: "noun", ex: "The pharmacy opens at 9:00.", ar: "صيدلية" },
     { en: "registration", pos: "noun", ex: "Registration is in the main building.", ar: "التسجيل (في الجامعة)" },
-    { en: "desk", pos: "noun", ex: "Please ask at the IT help desk.", ar: "مكتب / طاولة (مكتب الخدمة)" }
+    { en: "desk", pos: "noun", ex: "Please ask at the IT help desk.", ar: "مكتب / طاولة (مكتب الخدمة)" },
+    { en: "nurse", pos: "noun", ex: "The nurse can check your temperature.", ar: "ممرّض / ممرّضة" },
+    { en: "form", pos: "noun", ex: "Please fill out the form at the desk.", ar: "نموذج" }
   ],
   reading: {
     title: "A day at the clinic",
@@ -90,6 +92,114 @@ Sara goes to the pharmacy next to the clinic. Then she goes home. She can email 
     ],
     model: "Hello. My name is Yousef. I am a student in the English program. I have a fever and a headache. My legs hurt too. Can I make an appointment for tomorrow morning, please? I can come at 9:00. I can't go to class today. Thank you.",
     aiPrompt: "I am an A2 English learner. Please check this message to a clinic for mistakes with can, can't, I have a... and My ... hurts. Explain each correction simply: [paste your text here]"
+  },
+  dialogue: {
+    "title": "At the clinic desk",
+    "titleAr": "عند مكتب العيادة",
+    "setting": "A student asks a nurse for an appointment at the clinic.",
+    "settingAr": "طالب يطلب من الممرضة موعدًا في العيادة.",
+    "lines": [
+      {
+        "speaker": "Khalid",
+        "text": "Good morning. Can I see a doctor today?"
+      },
+      {
+        "speaker": "Salma",
+        "text": "Can you wait one hour? The doctor is busy."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "Yes, I can. I have a bad headache."
+      },
+      {
+        "speaker": "Salma",
+        "text": "Please fill out this form. Then wait in line."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "Can I use a pen, please?"
+      },
+      {
+        "speaker": "Salma",
+        "text": "Here you are. Is this your first visit?"
+      },
+      {
+        "speaker": "Khalid",
+        "text": "No, it isn't. I came last month."
+      },
+      {
+        "speaker": "Salma",
+        "text": "Okay. Please take a seat over there."
+      }
+    ],
+    "gloss": {
+      "doctor": {
+        "en": "a person who helps sick people",
+        "ar": "طبيب"
+      },
+      "wait": {
+        "en": "to stay until something happens",
+        "ar": "ينتظر"
+      },
+      "headache": {
+        "en": "a pain in the head",
+        "ar": "صداع"
+      },
+      "form": {
+        "en": "a paper with questions to fill out",
+        "ar": "نموذج"
+      },
+      "line": {
+        "en": "people standing one after another",
+        "ar": "صف انتظار"
+      },
+      "visit": {
+        "en": "a time when you go to see someone",
+        "ar": "زيارة"
+      }
+    },
+    "questions": [
+      {
+        "q": "How long does Khalid need to wait?",
+        "o": [
+          "One hour",
+          "Ten minutes",
+          "Half an hour",
+          "Two hours"
+        ],
+        "a": 0,
+        "why": "Salma asks <b>Can you wait one hour?</b> and Khalid says yes.",
+        "whyAr": "تسأله سلمى: هل يمكنك الانتظار ساعة؟ فيوافق."
+      },
+      {
+        "q": "Why does Khalid come to the clinic?",
+        "o": [
+          "He wants a new pen",
+          "He has a headache",
+          "He wants to buy medicine",
+          "He works there"
+        ],
+        "a": 1,
+        "why": "He says <b>I have a bad headache</b>.",
+        "whyAr": "يقول إنه يشعر بصداع شديد."
+      },
+      {
+        "q": "<i>Can I use a pen, please?</i> is a ___",
+        "o": [
+          "past question",
+          "strong order",
+          "polite request",
+          "personal opinion"
+        ],
+        "a": 2,
+        "why": "We use <b>Can I ..., please?</b> to ask for something politely.",
+        "whyAr": "نستخدم Can I ...، please؟ لطلب شيء بأدب."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the health problem and the waiting time.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر المشكلة الصحية ومدة الانتظار."
+    }
   },
   quiz: [
     {

@@ -4,7 +4,7 @@ DAYS[5] = {
   title: "Review: Starting to study", titleAr: "مراجعة: بداية الدراسة",
   goal: "I can introduce myself, talk about my study routine, and ask and answer simple questions.",
   goalAr: "أستطيع أن أعرّف بنفسي، وأتحدث عن روتين دراستي، وأطرح أسئلة بسيطة وأجيب عنها.",
-  plan: { read: 4, listen: 4, speak: 4, write: 6, quiz: 5, recap: 3 },
+  plan: { read: 4, recap: 3, listen: 4, dialogue: 4, speak: 4, write: 6, quiz: 5 },
   recap: {
     title: "Unit 1 at a glance",
     titleAr: "لمحة عن الوحدة 1",
@@ -71,6 +71,130 @@ DAYS[5] = {
     ],
     model: "My name is Hana. I am a student at a city college. I study biology on Sundays, Tuesdays and Wednesdays. My first class starts at 8:30, and it finishes at 10:00. My friend Noor studies art. She has a different schedule. I don't study on Thursday, but I read at the library. The library opens at 9:00. What time do you start class, and do you study at night?",
     aiPrompt: "I am learning English at A2 level. Please check this paragraph about my study week. Correct my grammar (am/is/are, present simple, don't/doesn't, do/does questions, a/an/the, times). Show each correction and explain it in one short sentence. Here is my text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Before the morning class",
+    "titleAr": "قبل حصة الصباح",
+    "setting": "A student introduces a new classmate to the teacher before class.",
+    "settingAr": "طالبة تعرّف زميلًا جديدًا بالمعلّمة قبل بداية الحصة.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "Hello, Dr. Rana. This is Omar. He is a new student here."
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Welcome, Omar. Where are you from?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I'm from Amman. My major is business. This is my first week."
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Good. Do you have a class this morning?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes, I do. Is the class in room 12 or room 14?"
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "Room 12. The lesson starts at nine fifteen every day."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Omar, do you come to the university by bus?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Usually, yes. But today my neighbor drives me."
+      },
+      {
+        "speaker": "Dr. Rana",
+        "text": "The calendar is on the wall. The exam week is in December."
+      },
+      {
+        "speaker": "Omar",
+        "text": "Thank you. I write all the dates in my notebook."
+      }
+    ],
+    "gloss": {
+      "major": {
+        "en": "the main subject of a college program",
+        "ar": "التخصص"
+      },
+      "lesson": {
+        "en": "one class period",
+        "ar": "درس / حصة"
+      },
+      "starts": {
+        "en": "begins",
+        "ar": "يبدأ"
+      },
+      "usually": {
+        "en": "most days, almost always",
+        "ar": "عادةً"
+      },
+      "neighbor": {
+        "en": "a person who lives near you",
+        "ar": "جار"
+      },
+      "calendar": {
+        "en": "a list of the days and months of the year",
+        "ar": "تقويم"
+      },
+      "notebook": {
+        "en": "a book with empty pages for writing",
+        "ar": "دفتر"
+      },
+      "dates": {
+        "en": "days of the month",
+        "ar": "تواريخ"
+      }
+    },
+    "questions": [
+      {
+        "q": "What time does the lesson start?",
+        "o": [
+          "At nine fifteen",
+          "At nine",
+          "At nine thirty",
+          "At ten"
+        ],
+        "a": 0,
+        "why": "Dr. Rana says <b>The lesson starts at nine fifteen</b>.",
+        "whyAr": "تقول د. رنا إن الدرس يبدأ في التاسعة والربع."
+      },
+      {
+        "q": "Why is today different for Omar?",
+        "o": [
+          "He has no class at nine",
+          "He comes with his neighbor, not by bus",
+          "He is late for the lesson",
+          "He forgets his notebook"
+        ],
+        "a": 1,
+        "why": "He says <b>Usually, yes</b>, but <b>today</b> his neighbor drives him.",
+        "whyAr": "يقول إنه عادةً يأتي بالحافلة، لكنه اليوم يأتي مع جاره."
+      },
+      {
+        "q": "___ you from Amman?",
+        "o": [
+          "Do",
+          "Is",
+          "Are",
+          "Be"
+        ],
+        "a": 2,
+        "why": "With <b>you</b> we use <b>are</b> in a question with the verb to be.",
+        "whyAr": "مع you نستخدم are في السؤال بفعل الكينونة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in groups of three. Change the room number and the start time.",
+      "promptAr": "تدرّبوا على الحوار في مجموعات من ثلاثة، وغيّروا رقم القاعة ووقت البداية."
+    }
   },
   quiz: [
     {

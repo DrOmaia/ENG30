@@ -5,7 +5,7 @@ DAYS[17] = {
   titleAr: "الآن وعادةً",
   goal: "I can say what is happening now with the present continuous and what happens usually with the present simple.",
   goalAr: "أستطيع أن أقول ما يحدث الآن باستخدام المضارع المستمر، وما يحدث عادةً باستخدام المضارع البسيط.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 8, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "wear", pos: "verb", ex: "The students wear white coats in the lab.", ar: "يرتدي" },
     { en: "prepare", pos: "verb", ex: "She is preparing a short talk for class.", ar: "يُعدّ / يحضّر" },
@@ -16,7 +16,9 @@ DAYS[17] = {
     { en: "discuss", pos: "verb", ex: "They usually discuss the homework after class.", ar: "يناقش" },
     { en: "believe", pos: "verb", ex: "I believe this answer is correct.", ar: "يعتقد / يصدّق" },
     { en: "understand", pos: "verb", ex: "I understand the question now.", ar: "يفهم" },
-    { en: "belong", pos: "verb", ex: "This notebook belongs to Sara.", ar: "ينتمي / يخصّ" }
+    { en: "belong", pos: "verb", ex: "This notebook belongs to Sara.", ar: "ينتمي / يخصّ" },
+    { en: "research", pos: "noun", ex: "I am doing research for my final report.", ar: "بحث" },
+    { en: "submit", pos: "verb", ex: "Students submit the task before Sunday.", ar: "يُسلّم" }
   ],
   reading: {
     title: "A busy afternoon at the library",
@@ -81,6 +83,122 @@ DAYS[17] = {
     ],
     model: "Right now, I am sitting in my room. I am writing this text on my laptop, and my brother is studying next to me. At the moment, my mother is cooking in the kitchen. Usually, I wake up at six, and I go to class by bus. Every day I study for two hours in the evening. I like this routine because I know my time is important.",
     aiPrompt: "I am learning English at level B1. Please check my text about what I am doing now and what I usually do. Correct my grammar (especially present continuous and present simple, and stative verbs), explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "What are you doing?",
+    "titleAr": "ماذا تفعلين الآن؟",
+    "setting": "Two students meet in the library and talk about a research task.",
+    "settingAr": "طالبان يتقابلان في المكتبة ويتحدثان عن مهمة بحثية.",
+    "lines": [
+      {
+        "speaker": "Khalid",
+        "text": "Lina, what are you doing?"
+      },
+      {
+        "speaker": "Lina",
+        "text": "I'm reviewing my notes. I usually study here on Monday."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "Are you working on the research task?"
+      },
+      {
+        "speaker": "Lina",
+        "text": "Yes. I'm currently reading two short reports."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "When do you submit it?"
+      },
+      {
+        "speaker": "Lina",
+        "text": "On Sunday. I always submit my work early."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "I'm doing the same task, but I'm not reading enough."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Read one report every evening. That really helps."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "Good advice. I'm starting tonight after dinner."
+      }
+    ],
+    "gloss": {
+      "reviewing": {
+        "en": "studying something again",
+        "ar": "يراجع"
+      },
+      "research": {
+        "en": "careful study to find information",
+        "ar": "بحث"
+      },
+      "currently": {
+        "en": "at this time",
+        "ar": "حاليًا"
+      },
+      "reports": {
+        "en": "written texts with facts and results",
+        "ar": "تقارير"
+      },
+      "submit": {
+        "en": "to give work to a teacher",
+        "ar": "يُسلّم"
+      },
+      "enough": {
+        "en": "as much as you need",
+        "ar": "بالقدر الكافي"
+      },
+      "advice": {
+        "en": "a suggestion about what to do",
+        "ar": "نصيحة"
+      }
+    },
+    "questions": [
+      {
+        "q": "When does Lina submit the task?",
+        "o": [
+          "On Sunday",
+          "On Monday",
+          "Tonight",
+          "Every evening"
+        ],
+        "a": 0,
+        "why": "Lina says <b>On Sunday</b>.",
+        "whyAr": "تقول لينا إنها تُسلّم العمل يوم الأحد."
+      },
+      {
+        "q": "What is Khalid's problem?",
+        "o": [
+          "He lost his notes",
+          "He is not reading enough",
+          "He has no computer",
+          "He submitted the task late"
+        ],
+        "a": 1,
+        "why": "He says <b>I'm not reading enough</b>.",
+        "whyAr": "يقول إنه لا يقرأ بالقدر الكافي."
+      },
+      {
+        "q": "Which sentence describes a habit?",
+        "o": [
+          "I'm reviewing my notes.",
+          "I'm currently reading two short reports.",
+          "I always submit my work early.",
+          "I'm starting tonight after dinner."
+        ],
+        "a": 2,
+        "why": "The present simple with <b>always</b> describes a habit.",
+        "whyAr": "المضارع البسيط مع always يصف عادة متكررة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Say one habit and one action happening now.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واذكر عادة واحدة وفعلًا يجري الآن."
+    }
   },
   quiz: [
     {

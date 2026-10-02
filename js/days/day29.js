@@ -5,7 +5,7 @@ DAYS[29] = {
   titleAr: "عرضي القصير",
   goal: "I can give a clear one-minute talk with an opening, three main points and a closing.",
   goalAr: "أستطيع أن أقدّم حديثًا واضحًا مدّته دقيقة واحدة يتضمّن افتتاحًا وثلاث نقاط رئيسية وخاتمة.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 4, write: 8, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "presentation", pos: "noun", ex: "My presentation is about healthy habits.", ar: "عرض تقديمي" },
     { en: "audience", pos: "noun", ex: "The audience listened carefully to the talk.", ar: "الجمهور" },
@@ -16,7 +16,9 @@ DAYS[29] = {
     { en: "confident", pos: "adjective", ex: "She felt confident after three practice talks.", ar: "واثق من نفسه" },
     { en: "nervous", pos: "adjective", ex: "I feel nervous before a talk, and that is normal.", ar: "متوتّر" },
     { en: "rehearse", pos: "verb", ex: "I rehearse my talk in front of a mirror.", ar: "يتدرّب على العرض" },
-    { en: "eye contact", pos: "noun", ex: "Make eye contact with people in the room.", ar: "التواصل البصري" }
+    { en: "eye contact", pos: "noun", ex: "Make eye contact with people in the room.", ar: "التواصل البصري" },
+    { en: "visual", pos: "adjective / noun", ex: "A visual example makes the idea clear.", ar: "مرئي / بصري" },
+    { en: "gesture", pos: "noun", ex: "A calm gesture shows confidence.", ar: "إيماءة" }
   ],
   reading: {
     title: "A one-minute talk",
@@ -84,6 +86,126 @@ DAYS[29] = {
     ],
     model: "Hello, everyone. My name is Hana, and I study nursing. Today I'd like to talk about my daily walk. First, I walk for thirty minutes after lunch. This gives me energy for the afternoon. Second, I listen to English audio on my phone, so I practice listening too. Finally, I think about my day, and I feel calm. To sum up, a short walk is good for my body and my mind. Thank you for listening. Does anyone have any questions?",
     aiPrompt: "I am learning English at level B1. Please check the script for my one-minute talk. Make sure it has an opening, three main points (first, second, finally) and a closing. Correct my grammar, explain each mistake in simple words, and suggest one way to make the talk clearer. My script: [paste your script here]"
+  },
+  dialogue: {
+    "title": "My talk is too long",
+    "titleAr": "عرضي طويل جدًا",
+    "setting": "A student rehearses a one-minute talk with a friend.",
+    "settingAr": "طالب يتدرّب على عرض من دقيقة واحدة مع صديقته.",
+    "lines": [
+      {
+        "speaker": "Ali",
+        "text": "Layla, I've rehearsed my talk three times. It is still too long."
+      },
+      {
+        "speaker": "Layla",
+        "text": "How many minutes is it now?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "Two. The limit is only one minute."
+      },
+      {
+        "speaker": "Layla",
+        "text": "Cut one example. Keep the opening, two points and the closing."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Should I use a visual on the screen?"
+      },
+      {
+        "speaker": "Layla",
+        "text": "Yes. One simple picture helps the audience follow you."
+      },
+      {
+        "speaker": "Ali",
+        "text": "I'm a little nervous about my voice."
+      },
+      {
+        "speaker": "Layla",
+        "text": "Speak a little louder, and pause after each point."
+      },
+      {
+        "speaker": "Ali",
+        "text": "And my hands? I never know where to put them."
+      },
+      {
+        "speaker": "Layla",
+        "text": "Use one calm gesture. Ask me for feedback after your next try."
+      }
+    ],
+    "gloss": {
+      "rehearsed": {
+        "en": "practiced a talk before the real time",
+        "ar": "تدرّب / تمرّن"
+      },
+      "opening": {
+        "en": "the first part of a talk",
+        "ar": "مقدمة"
+      },
+      "closing": {
+        "en": "the last part of a talk",
+        "ar": "خاتمة"
+      },
+      "visual": {
+        "en": "a picture or chart that you show",
+        "ar": "عنصر مرئي"
+      },
+      "audience": {
+        "en": "the people who listen to you",
+        "ar": "الجمهور"
+      },
+      "gesture": {
+        "en": "a movement of the hands or head",
+        "ar": "إيماءة"
+      },
+      "feedback": {
+        "en": "useful comments about your work",
+        "ar": "تغذية راجعة / ملاحظات"
+      }
+    },
+    "questions": [
+      {
+        "q": "How long should Ali's talk be?",
+        "o": [
+          "One minute",
+          "Two minutes",
+          "Three minutes",
+          "Half a minute"
+        ],
+        "a": 0,
+        "why": "He says <b>The limit is only one minute</b>.",
+        "whyAr": "يقول إن الحد المسموح دقيقة واحدة فقط."
+      },
+      {
+        "q": "Why does Layla suggest one simple picture?",
+        "o": [
+          "Because the room is dark",
+          "Because it helps the audience follow the talk",
+          "Because Ali has no notes",
+          "Because the talk is too short"
+        ],
+        "a": 1,
+        "why": "She says a simple picture <b>helps the audience follow you</b>.",
+        "whyAr": "تقول إن صورة بسيطة تساعد الجمهور على المتابعة."
+      },
+      {
+        "q": "<i>I've rehearsed my talk three times.</i> The result is important ___",
+        "o": [
+          "last year",
+          "tomorrow",
+          "now",
+          "every week"
+        ],
+        "a": 2,
+        "why": "The present perfect shows a past action with a result in the present.",
+        "whyAr": "المضارع التام يدل على حدث ماضٍ له نتيجة في الحاضر."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Then give a one-minute talk and ask for feedback.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، ثم قدّم عرضًا من دقيقة واطلب ملاحظات."
+    }
   },
   quiz: [
     {

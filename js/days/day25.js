@@ -4,7 +4,7 @@ DAYS[25] = {
   title: "Review: Plans, opinions, problems", titleAr: "مراجعة: الخطط والآراء والمشكلات",
   goal: "I can give advice, make plans and predictions, and give a reasoned opinion with polite disagreement.",
   goalAr: "أستطيع أن أقدّم نصيحة، وأضع خططًا وتوقعات، وأبدي رأيًا مع سببه وأختلف بأدب.",
-  plan: { read: 4, listen: 4, speak: 4, write: 7, quiz: 6, recap: 3 },
+  plan: { read: 4, recap: 3, listen: 4, dialogue: 4, speak: 4, write: 6, quiz: 5 },
   recap: {
     title: "Unit 5 at a glance",
     titleAr: "لمحة عن الوحدة 5",
@@ -70,6 +70,118 @@ DAYS[25] = {
     ],
     model: "Dear Ali, I am sorry to hear about your noisy apartment. I think you should study in the library in the evening. One reason is that it is quiet, so you can concentrate. If you go there after class, you will finish your homework early. You don't have to buy new books. I am going to visit you on Friday, and I will bring a pair of headphones. In my opinion, a good place to study is the best gift. What do you think about my idea? Good luck! Karim",
     aiPrompt: "I am learning English at level B1. Please check my short email giving advice to a friend. Correct the grammar, especially should, will, going to, first conditional and opinion phrases. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "A plan for the final test",
+    "titleAr": "خطة للاختبار النهائي",
+    "setting": "Three students make a study plan and give each other advice.",
+    "settingAr": "ثلاثة طلاب يضعون خطة للدراسة ويتبادلون النصائح.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "We have the final test in two weeks. What is our plan?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I'm going to review one unit every evening after dinner."
+      },
+      {
+        "speaker": "Layla",
+        "text": "You should also answer old exam questions. If you practice, you will feel ready."
+      },
+      {
+        "speaker": "Sara",
+        "text": "In my opinion, we must study together twice a week."
+      },
+      {
+        "speaker": "Omar",
+        "text": "I agree, but we have to choose a quiet room for that."
+      },
+      {
+        "speaker": "Layla",
+        "text": "I'll book the small room in the library for Sunday morning."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Good. If the room isn't free, we will meet in the cafeteria."
+      },
+      {
+        "speaker": "Omar",
+        "text": "I think we'll finish Unit 4 before Thursday."
+      },
+      {
+        "speaker": "Layla",
+        "text": "Then we should keep Friday free. Tired students forget everything."
+      }
+    ],
+    "gloss": {
+      "review": {
+        "en": "to study something again",
+        "ar": "يراجع"
+      },
+      "ready": {
+        "en": "prepared for something",
+        "ar": "مستعد"
+      },
+      "opinion": {
+        "en": "what a person thinks about something",
+        "ar": "رأي"
+      },
+      "book": {
+        "en": "to keep a place for a later time",
+        "ar": "يحجز"
+      },
+      "free": {
+        "en": "not used by other people",
+        "ar": "متاح / غير محجوز"
+      },
+      "forget": {
+        "en": "to not remember",
+        "ar": "ينسى"
+      }
+    },
+    "questions": [
+      {
+        "q": "When is the final test?",
+        "o": [
+          "In two weeks",
+          "On Sunday",
+          "On Thursday",
+          "Next month"
+        ],
+        "a": 0,
+        "why": "Sara says <b>We have the final test in two weeks</b>.",
+        "whyAr": "تقول سارة إن الاختبار النهائي بعد أسبوعين."
+      },
+      {
+        "q": "Why does Layla want to keep Friday free?",
+        "o": [
+          "Because the library closes on Friday",
+          "Because rest helps students remember",
+          "Because they will finish all the units",
+          "Because the cafeteria is quiet then"
+        ],
+        "a": 1,
+        "why": "She says <b>Tired students forget everything</b>.",
+        "whyAr": "تقول إن الطلاب المتعبين ينسون كل شيء."
+      },
+      {
+        "q": "If the room isn't free, we ___ meet in the cafeteria.",
+        "o": [
+          "would",
+          "are",
+          "will",
+          "will to"
+        ],
+        "a": 2,
+        "why": "In the first conditional the result part uses <b>will</b> plus the base verb.",
+        "whyAr": "في الشرط الأول يأتي جزء النتيجة بـ will مع الفعل الأساسي."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in groups of three. Make a real study plan for your next test.",
+      "promptAr": "تدرّبوا على الحوار في مجموعات من ثلاثة، وضعوا خطة دراسية حقيقية لاختباركم القادم."
+    }
   },
   quiz: [
     {

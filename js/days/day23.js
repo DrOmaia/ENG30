@@ -5,7 +5,7 @@ DAYS[23] = {
   titleAr: "إذا حدث هذا، فسيحدث ذاك",
   goal: "I can talk about real possibilities and warnings with the first conditional.",
   goalAr: "أستطيع الحديث عن احتمالات حقيقية وتحذيرات باستخدام الجملة الشرطية الأولى.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 3, write: 6, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "consequence", pos: "noun", ex: "Missing class can have bad consequences.", ar: "نتيجة، عاقبة" },
     { en: "grade", pos: "noun", ex: "She got a good grade on the test.", ar: "درجة" },
@@ -16,7 +16,9 @@ DAYS[23] = {
     { en: "risk", pos: "noun", ex: "Studying late at night is a risk for your health.", ar: "مخاطرة" },
     { en: "chance", pos: "noun", ex: "You have a good chance to pass.", ar: "فرصة" },
     { en: "warn", pos: "verb", ex: "The teacher warned us about the quiz.", ar: "يحذّر" },
-    { en: "tutor", pos: "noun", ex: "My tutor helps me with math.", ar: "مدرّس خصوصي" }
+    { en: "tutor", pos: "noun", ex: "My tutor helps me with math.", ar: "مدرّس مساعد / مدرّس خصوصي" },
+    { en: "succeed", pos: "verb", ex: "You will succeed if you work every day.", ar: "ينجح" },
+    { en: "effect", pos: "noun", ex: "Good sleep has a big effect on my grades.", ar: "أثر" }
   ],
   reading: {
     title: "Hamza's choice",
@@ -85,6 +87,118 @@ DAYS[23] = {
     ],
     model: "My study choices have clear consequences. If I review my notes every evening, I will remember more. I will get a good grade if I attend every class. If I don't sleep enough, I won't focus in the morning. If my friends invite me out before a test, I will say no. I will ask my tutor for help if a lesson is difficult. If I follow this plan, I will feel confident on the day of the exam, and my family will be proud of me.",
     aiPrompt: "I am learning English at level B1. Please check my first conditional sentences about my study choices. Correct the grammar, especially the present simple after if, will plus the base verb, and commas. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "If you attend every class",
+    "titleAr": "إذا حضرت كل الحصص",
+    "setting": "Two students talk about attendance, grades and help from the tutor.",
+    "settingAr": "طالبان يتحدثان عن الحضور والدرجات والمساعدة من المدرّس المساعد.",
+    "lines": [
+      {
+        "speaker": "Nora",
+        "text": "Ali, if you miss three lectures, you will lose five points."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Really? And what will happen if I attend every class?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "If you attend, the teacher will give you two extra points."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Then I'll come early. Will the tutor help me if I ask?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "Yes. If you send her an email, she will answer the same day."
+      },
+      {
+        "speaker": "Ali",
+        "text": "I need full attention in lectures. I lose focus quickly."
+      },
+      {
+        "speaker": "Nora",
+        "text": "If you sit near the front, you will hear everything clearly."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Good idea. That will have a big effect on my grade."
+      }
+    ],
+    "gloss": {
+      "lectures": {
+        "en": "formal talks to a class of students",
+        "ar": "محاضرات"
+      },
+      "points": {
+        "en": "grades that you get for your work",
+        "ar": "نقاط / درجات"
+      },
+      "attend": {
+        "en": "to go to a class or a meeting",
+        "ar": "يحضر"
+      },
+      "tutor": {
+        "en": "a teacher who helps a small group",
+        "ar": "مدرّس مساعد / مدرّس خصوصي"
+      },
+      "attention": {
+        "en": "careful thinking about one thing",
+        "ar": "انتباه"
+      },
+      "focus": {
+        "en": "the ability to think about one thing only",
+        "ar": "تركيز"
+      },
+      "effect": {
+        "en": "a change that something causes",
+        "ar": "أثر"
+      }
+    },
+    "questions": [
+      {
+        "q": "What happens if Ali misses three lectures?",
+        "o": [
+          "He will repeat the course",
+          "He will meet the tutor",
+          "He will lose five points",
+          "He will sit near the front"
+        ],
+        "a": 2,
+        "why": "Nora says <b>you will lose five points</b>.",
+        "whyAr": "تقول نورة إنه سيفقد خمس نقاط."
+      },
+      {
+        "q": "Why does Nora tell Ali to sit near the front?",
+        "o": [
+          "The lecture room is very small",
+          "The teacher asked him to move",
+          "He will meet the tutor there",
+          "He will hear and follow the lesson better"
+        ],
+        "a": 3,
+        "why": "She says <b>you will hear everything clearly</b>.",
+        "whyAr": "تقول إنه سيسمع كل شيء بوضوح."
+      },
+      {
+        "q": "If you ___ her an email, she will answer.",
+        "o": [
+          "send",
+          "will send",
+          "sent",
+          "sending"
+        ],
+        "a": 0,
+        "why": "In the first conditional the <b>if</b> part uses the present simple.",
+        "whyAr": "في الشرط الأول يأتي جزء if في المضارع البسيط."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Make three sentences with if and will.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وكوّن ثلاث جمل باستخدام if وwill."
+    }
   },
   quiz: [
     {

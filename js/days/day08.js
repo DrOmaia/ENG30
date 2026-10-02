@@ -5,7 +5,7 @@ DAYS[8] = {
   titleAr: "التسوّق والأسعار",
   goal: "I can ask about prices and quantities and buy simple things in a shop.",
   goalAr: "أستطيع أن أسأل عن الأسعار والكميات وأشتري أشياء بسيطة من المتجر.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "shop", pos: "noun", ex: "The shop opens at nine.", ar: "متجر / دكان" },
     { en: "price", pos: "noun", ex: "What is the price of this book?", ar: "سعر" },
@@ -16,7 +16,9 @@ DAYS[8] = {
     { en: "milk", pos: "noun", ex: "I drink milk every morning.", ar: "حليب" },
     { en: "bread", pos: "noun", ex: "We need some bread.", ar: "خبز" },
     { en: "rice", pos: "noun", ex: "There isn't any rice at home.", ar: "أرز" },
-    { en: "riyal", pos: "noun", ex: "The pen is two riyals.", ar: "ريال" }
+    { en: "riyal", pos: "noun", ex: "The pen is two riyals.", ar: "ريال" },
+    { en: "receipt", pos: "noun", ex: "Please keep the receipt in your bag.", ar: "إيصال" },
+    { en: "cash", pos: "noun", ex: "I pay in cash at the small shop.", ar: "نقد / مال نقدي" }
   ],
   reading: {
     title: "At the shop",
@@ -81,6 +83,118 @@ DAYS[8] = {
     ],
     model: "Customer: Good morning. Can I have some rice, please? Owner: Of course. Do you need any milk? Customer: Yes, please. How much is the milk? Owner: It is 7 riyals. Customer: And how many apples are there in a kilo? Owner: There are about five. Customer: I need some apples too. Owner: That is 25 riyals, please.",
     aiPrompt: "I am learning English at A2 level. Please check my shop dialogue. Correct my use of a/an/some/any, how much / how many and prices. Show each correction with one short reason. Here is my text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "At the small shop",
+    "titleAr": "في الدكان الصغير",
+    "setting": "A student buys food at a small shop near the campus.",
+    "settingAr": "طالبة تشتري بعض الطعام من دكان صغير قريب من الحرم الجامعي.",
+    "lines": [
+      {
+        "speaker": "Nora",
+        "text": "Hello. How much is a bottle of water?"
+      },
+      {
+        "speaker": "Yusuf",
+        "text": "One riyal. Do you need bread too?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "Yes, two loaves, please. And some sugar."
+      },
+      {
+        "speaker": "Yusuf",
+        "text": "We have sugar in small bags. How many?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "One bag is enough. Is the rice cheap today?"
+      },
+      {
+        "speaker": "Yusuf",
+        "text": "Yes, it's cheap. That's twelve riyals."
+      },
+      {
+        "speaker": "Nora",
+        "text": "Here is the cash. Can I have a receipt?"
+      },
+      {
+        "speaker": "Yusuf",
+        "text": "Sure. Thank you, and have a nice day."
+      }
+    ],
+    "gloss": {
+      "bottle": {
+        "en": "a glass or plastic container for drinks",
+        "ar": "زجاجة"
+      },
+      "bread": {
+        "en": "a basic food made from flour",
+        "ar": "خبز"
+      },
+      "sugar": {
+        "en": "a sweet white food for tea and coffee",
+        "ar": "سكر"
+      },
+      "bags": {
+        "en": "small containers of paper or plastic",
+        "ar": "أكياس"
+      },
+      "rice": {
+        "en": "small white grains that we cook",
+        "ar": "أرز"
+      },
+      "cash": {
+        "en": "money in notes and coins",
+        "ar": "نقد"
+      },
+      "receipt": {
+        "en": "a paper that shows what you paid",
+        "ar": "إيصال"
+      }
+    },
+    "questions": [
+      {
+        "q": "How much does Nora pay?",
+        "o": [
+          "One riyal",
+          "Twelve riyals",
+          "Two riyals",
+          "Twenty riyals"
+        ],
+        "a": 1,
+        "why": "Yusuf says <b>That's twelve riyals</b>.",
+        "whyAr": "يقول يوسف إن المجموع اثنا عشر ريالًا."
+      },
+      {
+        "q": "Why does Nora ask for a receipt?",
+        "o": [
+          "She wants more sugar",
+          "She wants a bigger bag",
+          "She wants a paper with the price",
+          "She wants to pay later"
+        ],
+        "a": 2,
+        "why": "A receipt shows the price of the things you buy.",
+        "whyAr": "الإيصال ورقة تبيّن سعر الأشياء التي اشتريتها."
+      },
+      {
+        "q": "___ sugar do you need?",
+        "o": [
+          "How many",
+          "How long",
+          "How often",
+          "How much"
+        ],
+        "a": 3,
+        "why": "<b>Sugar</b> is uncountable, so we ask <b>How much</b>. Yusuf says <i>How many?</i> because he means bags.",
+        "whyAr": "كلمة sugar غير معدودة، لذلك نسأل بـ How much. ويقول يوسف How many لأنه يقصد الأكياس."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the items and the prices.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر المشتريات والأسعار."
+    }
   },
   quiz: [
     {

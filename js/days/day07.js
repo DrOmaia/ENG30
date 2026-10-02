@@ -5,7 +5,7 @@ DAYS[7] = {
   titleAr: "السؤال عن الاتجاهات",
   goal: "I can ask for directions politely and follow or give a simple route.",
   goalAr: "أستطيع أن أسأل عن الاتجاهات بأدب، وأتبع طريقًا بسيطًا أو أصفه.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "turn", pos: "verb", ex: "Turn left at the corner.", ar: "يدور / ينعطف" },
     { en: "left", pos: "adjective / adverb", ex: "The office is on the left.", ar: "يسار" },
@@ -16,7 +16,9 @@ DAYS[7] = {
     { en: "street", pos: "noun", ex: "My home is on this street.", ar: "شارع" },
     { en: "corner", pos: "noun", ex: "There is a shop on the corner.", ar: "زاوية / ناصية" },
     { en: "map", pos: "noun", ex: "I have a map of the campus.", ar: "خريطة" },
-    { en: "far", pos: "adjective / adverb", ex: "The station is not far from here.", ar: "بعيد" }
+    { en: "far", pos: "adjective / adverb", ex: "The station is not far from here.", ar: "بعيد" },
+    { en: "sidewalk", pos: "noun", ex: "Please walk on the sidewalk, not on the road.", ar: "رصيف" },
+    { en: "traffic", pos: "noun", ex: "The traffic is slow in the morning.", ar: "حركة المرور" }
   ],
   reading: {
     title: "Where is the library?",
@@ -81,6 +83,118 @@ DAYS[7] = {
     ],
     model: "Excuse me, how do I get to the lab? First, go straight from the main gate. Then turn left at the corner. Next, cross the road. Walk past the cafeteria. The lab is on your right, next to the library. It is not far. It is about three minutes from the gate. Thank you!",
     aiPrompt: "I am learning English at A2 level. Please check my directions to a place on campus. Correct my imperatives (Go, Turn, Cross), first/then/next and polite requests. Show each correction with one short reason. Here is my text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "The way to the clinic",
+    "titleAr": "الطريق إلى العيادة",
+    "setting": "A visitor asks a student for directions to the clinic.",
+    "settingAr": "زائر يسأل طالبة عن الطريق إلى العيادة.",
+    "lines": [
+      {
+        "speaker": "Sam",
+        "text": "Excuse me, could you help me, please?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Of course. Where do you want to go?"
+      },
+      {
+        "speaker": "Sam",
+        "text": "The clinic, please. Is it far from here?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "No, it's nearby. Go straight for one block."
+      },
+      {
+        "speaker": "Sam",
+        "text": "And then? Do I turn?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Turn right at the traffic light. Cross the road."
+      },
+      {
+        "speaker": "Sam",
+        "text": "So the clinic is on the other sidewalk?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Yes, it's on the left. You can't miss it."
+      }
+    ],
+    "gloss": {
+      "clinic": {
+        "en": "a small place for medical help",
+        "ar": "عيادة"
+      },
+      "nearby": {
+        "en": "close to here",
+        "ar": "قريب"
+      },
+      "block": {
+        "en": "the street between two corners",
+        "ar": "المسافة بين تقاطعَين"
+      },
+      "traffic": {
+        "en": "the cars on a road (a traffic light tells cars when to stop)",
+        "ar": "حركة المرور (traffic light: إشارة المرور)"
+      },
+      "cross": {
+        "en": "to go from one side to the other",
+        "ar": "يعبُر"
+      },
+      "sidewalk": {
+        "en": "the path beside a road for people",
+        "ar": "رصيف"
+      },
+      "right": {
+        "en": "the side opposite the left",
+        "ar": "يمين"
+      }
+    },
+    "questions": [
+      {
+        "q": "Where does Sam want to go?",
+        "o": [
+          "To the library",
+          "To the gate",
+          "To the clinic",
+          "To the pharmacy"
+        ],
+        "a": 2,
+        "why": "Sam says <b>The clinic</b> when Reem asks about his destination.",
+        "whyAr": "يقول سام إنه يريد الوصول إلى العيادة."
+      },
+      {
+        "q": "What does Reem mean by <i>You can't miss it</i>?",
+        "o": [
+          "It is closed today",
+          "It is very far",
+          "You must run",
+          "It is easy to see"
+        ],
+        "a": 3,
+        "why": "<b>You can't miss it</b> means the place is clear and easy to find.",
+        "whyAr": "عبارة You can't miss it تعني أن المكان واضح وسهل العثور عليه."
+      },
+      {
+        "q": "Which sentence is a polite request?",
+        "o": [
+          "Could you help me, please?",
+          "Help me now.",
+          "You help me.",
+          "I help you."
+        ],
+        "a": 0,
+        "why": "<b>Could you ... please?</b> is a polite way to ask for help.",
+        "whyAr": "صيغة Could you ... please؟ هي طريقة مؤدبة لطلب المساعدة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Give directions to another place on campus.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وأعطِ إرشادات للوصول إلى مكان آخر في الحرم الجامعي."
+    }
   },
   quiz: [
     {

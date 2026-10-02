@@ -5,7 +5,7 @@ DAYS[26] = {
   titleAr: "ما الذي أنجزته",
   goal: "I can use the present perfect to talk about my experience and about things that started in the past and continue now.",
   goalAr: "أستطيع استخدام المضارع التام للحديث عن خبراتي وعن أمور بدأت في الماضي وما زالت مستمرة.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 6, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "experience", pos: "noun", ex: "Working in a library was a good experience for me.", ar: "خبرة، تجربة" },
     { en: "achieve", pos: "verb", ex: "She has achieved her goal of passing the exam.", ar: "يحقّق، ينجز" },
@@ -16,7 +16,9 @@ DAYS[26] = {
     { en: "travel", pos: "verb", ex: "She has traveled to Spain twice.", ar: "يسافر" },
     { en: "volunteer", pos: "noun", ex: "My brother has been a volunteer at the hospital since May.", ar: "متطوّع" },
     { en: "successful", pos: "adjective", ex: "He has been successful in his studies.", ar: "ناجح" },
-    { en: "already", pos: "adverb", ex: "I have already read this book.", ar: "بالفعل، من قبل" }
+    { en: "already", pos: "adverb", ex: "I have already read this book.", ar: "بالفعل، من قبل" },
+    { en: "participate", pos: "verb", ex: "I have participated in two writing workshops.", ar: "يشارك" },
+    { en: "publish", pos: "verb", ex: "The college has published the new schedule.", ar: "ينشر" }
   ],
   reading: {
     title: "Mariam's busy year",
@@ -84,6 +86,114 @@ DAYS[26] = {
     ],
     model: "I have lived in my city for ten years, and I have studied English since 2022. This year, I have already finished two courses at my university. I have never traveled to another country, but I have visited many cities in my own country. Last summer, I visited Aqaba with my family, and we stayed there for a week. I have not taken my final exam yet, so I am studying every evening. I have also joined a small volunteer group, and I have learned a lot from it. It has been a useful experience.",
     aiPrompt: "I am learning English at level B1. Please check my paragraph about my experience. Correct the grammar, especially the present perfect, for and since, and the difference from the past simple. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "What have you done this year?",
+    "titleAr": "ماذا أنجزت هذا العام؟",
+    "setting": "Two students talk about what they have achieved this year.",
+    "settingAr": "طالبان يتحدثان عما أنجزاه هذا العام.",
+    "lines": [
+      {
+        "speaker": "Khalid",
+        "text": "Reem, have you finished your project?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Yes, I've completed it. I started it in September."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "That is great progress. Have you published anything?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Not yet. I've written two short reports for the class only."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "I've participated in a reading club this term."
+      },
+      {
+        "speaker": "Reem",
+        "text": "Really? Has it helped your English?"
+      },
+      {
+        "speaker": "Khalid",
+        "text": "A lot. I've already read four short books in English."
+      },
+      {
+        "speaker": "Reem",
+        "text": "That's impressive! I haven't read one book this month."
+      }
+    ],
+    "gloss": {
+      "completed": {
+        "en": "finished something",
+        "ar": "أكمل"
+      },
+      "progress": {
+        "en": "movement forward, improvement",
+        "ar": "تقدّم"
+      },
+      "published": {
+        "en": "made a text public for readers",
+        "ar": "نشر"
+      },
+      "written": {
+        "en": "past participle of write",
+        "ar": "مكتوب / كتب"
+      },
+      "participated": {
+        "en": "took part in an activity",
+        "ar": "شارك"
+      },
+      "already": {
+        "en": "before now, earlier than expected",
+        "ar": "سبق أن / بالفعل"
+      }
+    },
+    "questions": [
+      {
+        "q": "How many short books has Khalid read?",
+        "o": [
+          "Two",
+          "Three",
+          "One",
+          "Four"
+        ],
+        "a": 3,
+        "why": "He says <b>I've already read four short books</b>.",
+        "whyAr": "يقول إنه قرأ أربعة كتب قصيرة."
+      },
+      {
+        "q": "Why is Khalid's English better now?",
+        "o": [
+          "Because he has joined a reading club",
+          "Because he has published a report",
+          "Because he has finished a project",
+          "Because he has written two reports"
+        ],
+        "a": 0,
+        "why": "He has participated in a reading club, and it has helped a lot.",
+        "whyAr": "شارك في نادٍ للقراءة، وقد ساعده ذلك كثيرًا."
+      },
+      {
+        "q": "I ___ read one book this month.",
+        "o": [
+          "didn't have",
+          "haven't",
+          "not have",
+          "am not"
+        ],
+        "a": 1,
+        "why": "The present perfect negative is <b>haven't</b> plus the past participle.",
+        "whyAr": "نفي المضارع التام يكون بـ haven't مع التصريف الثالث."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Say two things you have done this year.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واذكر أمرين أنجزتهما هذا العام."
+    }
   },
   quiz: [
     {

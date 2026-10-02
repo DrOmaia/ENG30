@@ -5,7 +5,7 @@ DAYS[3] = {
   titleAr: "طرح الأسئلة",
   goal: "I can ask and answer simple questions with do, does and question words.",
   goalAr: "أستطيع أن أطرح أسئلة بسيطة بـ do وdoes وكلمات الاستفهام وأجيب عنها.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "question", pos: "noun", ex: "I have a question about the exam.", ar: "سؤال" },
     { en: "answer", pos: "noun", ex: "Your answer is correct.", ar: "إجابة" },
@@ -16,7 +16,9 @@ DAYS[3] = {
     { en: "lecture", pos: "noun", ex: "The lecture is in room 5.", ar: "محاضرة" },
     { en: "campus", pos: "noun", ex: "The campus is big and green.", ar: "الحرم الجامعي" },
     { en: "university", pos: "noun", ex: "My sister studies at a university in Dubai.", ar: "جامعة" },
-    { en: "cafe", pos: "noun", ex: "We drink tea in the cafe.", ar: "مقهى" }
+    { en: "cafe", pos: "noun", ex: "We drink tea in the cafe.", ar: "مقهى" },
+    { en: "meaning", pos: "noun", ex: "I check the meaning in my dictionary.", ar: "معنى" },
+    { en: "spell", pos: "verb", ex: "Please spell your family name for me.", ar: "يتهجّأ" }
   ],
   reading: {
     title: "A new student",
@@ -88,6 +90,114 @@ Mr. Khalid says, "Good questions! Come to my lecture on Monday. It starts at 10:
     ],
     model: "Do you live near the campus? Yes, I do. Where do you study? What time does your first lecture start? Does your friend study here too? No, she doesn't. Why do you study English? How do you get to the university?",
     aiPrompt: "I am an A2 English learner. Please check these questions for mistakes with do, does and word order, and explain each correction simply: [paste your questions here]"
+  },
+  dialogue: {
+    "title": "What does this word mean?",
+    "titleAr": "ما معنى هذه الكلمة؟",
+    "setting": "A student asks a classmate about a new word before the lesson.",
+    "settingAr": "طالب يسأل زميلته عن كلمة جديدة قبل بداية الدرس.",
+    "lines": [
+      {
+        "speaker": "Khalid",
+        "text": "Reem, please look. What does this word mean?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Which word? Show me the page, please."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "This one. How do you say it?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Topic. T-O-P-I-C. Do you know the meaning now?"
+      },
+      {
+        "speaker": "Khalid",
+        "text": "No, I don't. Does the teacher explain this topic today?"
+      },
+      {
+        "speaker": "Reem",
+        "text": "Yes, she does. She repeats new words twice."
+      },
+      {
+        "speaker": "Khalid",
+        "text": "Good. I ask a lot of questions in every class."
+      },
+      {
+        "speaker": "Reem",
+        "text": "That's fine. Good questions help everyone in the class."
+      }
+    ],
+    "gloss": {
+      "mean": {
+        "en": "to have a certain idea or sense",
+        "ar": "يعني"
+      },
+      "topic": {
+        "en": "the subject of a text or a talk",
+        "ar": "موضوع"
+      },
+      "meaning": {
+        "en": "the idea of a word",
+        "ar": "معنى"
+      },
+      "explain": {
+        "en": "to make something clear",
+        "ar": "يشرح"
+      },
+      "repeats": {
+        "en": "says the same thing again",
+        "ar": "تُكرّر"
+      },
+      "questions": {
+        "en": "sentences that ask for information",
+        "ar": "أسئلة"
+      }
+    },
+    "questions": [
+      {
+        "q": "What is the new word?",
+        "o": [
+          "teacher",
+          "class",
+          "topic",
+          "answer"
+        ],
+        "a": 2,
+        "why": "Reem says the word and then spells it: <b>T-O-P-I-C</b>.",
+        "whyAr": "تنطق ريم الكلمة ثم تتهجّاها: topic."
+      },
+      {
+        "q": "Why does Khalid talk to Reem?",
+        "o": [
+          "He wants to borrow her notebook",
+          "He wants to leave the class",
+          "He wants to meet the teacher",
+          "He wants help with a new word"
+        ],
+        "a": 3,
+        "why": "He asks about the meaning of the word and how to say it.",
+        "whyAr": "هو يسأل عن معنى الكلمة وكيفية نطقها."
+      },
+      {
+        "q": "___ the teacher explain it today?",
+        "o": [
+          "Does",
+          "Do",
+          "Is",
+          "Are"
+        ],
+        "a": 0,
+        "why": "<b>The teacher</b> is singular, so the question starts with <b>Does</b>.",
+        "whyAr": "كلمة the teacher مفردة، لذلك يبدأ السؤال بـ Does."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the word and spell it aloud.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر الكلمة وتهجّأها بصوت واضح."
+    }
   },
   quiz: [
     {

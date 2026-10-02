@@ -5,7 +5,7 @@ DAYS[4] = {
   titleAr: "الأرقام والأوقات وأدوات التنكير والتعريف",
   goal: "I can use numbers, tell the time, say dates, and use a, an and the.",
   goalAr: "أستطيع استخدام الأرقام وقول الوقت والتواريخ واستخدام a وan وthe.",
-  plan: { words: 3, read: 4, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "number", pos: "noun", ex: "My phone number has ten digits.", ar: "رقم" },
     { en: "clock", pos: "noun", ex: "The clock is on the wall.", ar: "ساعة حائط" },
@@ -16,7 +16,9 @@ DAYS[4] = {
     { en: "month", pos: "noun", ex: "June is a hot month.", ar: "شهر" },
     { en: "week", pos: "noun", ex: "There are seven days in a week.", ar: "أسبوع" },
     { en: "weekend", pos: "noun", ex: "I rest on the weekend.", ar: "عطلة نهاية الأسبوع" },
-    { en: "birthday", pos: "noun", ex: "My birthday is in April.", ar: "عيد ميلاد" }
+    { en: "birthday", pos: "noun", ex: "My birthday is in April.", ar: "عيد ميلاد" },
+    { en: "calendar", pos: "noun", ex: "The calendar is on the wall of my room.", ar: "تقويم" },
+    { en: "semester", pos: "noun", ex: "This semester has fifteen weeks.", ar: "فصل دراسي" }
   ],
   reading: {
     title: "Omar is late",
@@ -88,6 +90,118 @@ His sister's birthday is on Friday, October 20. On the weekend, they have a smal
     ],
     model: "My birthday is on May 15. I have a lesson on Tuesday at half past eight. The lesson is an hour long. I have a notebook and an old dictionary. The notebook is green. On the weekend, I visit my family at 4:00.",
     aiPrompt: "I am an A2 English learner. Please check my text for mistakes with numbers, times, dates and a, an, the, and explain each correction simply: [paste your text here]"
+  },
+  dialogue: {
+    "title": "At the registration desk",
+    "titleAr": "عند مكتب التسجيل",
+    "setting": "A student asks a staff member about the dates of the new semester.",
+    "settingAr": "طالب يسأل موظفة عن مواعيد الفصل الدراسي الجديد.",
+    "lines": [
+      {
+        "speaker": "Ali",
+        "text": "Good morning. When does the new semester start?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "It starts on Sunday, September 7."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Thank you. What time is the office open?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "From eight to two. We close at noon on Thursday."
+      },
+      {
+        "speaker": "Ali",
+        "text": "I need a calendar for the new semester."
+      },
+      {
+        "speaker": "Nora",
+        "text": "Here it is. The exam week is in December."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Do I register online or here?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "Online. You register in the first week."
+      }
+    ],
+    "gloss": {
+      "semester": {
+        "en": "one half of the study year",
+        "ar": "فصل دراسي"
+      },
+      "starts": {
+        "en": "begins",
+        "ar": "يبدأ"
+      },
+      "office": {
+        "en": "a room where people work",
+        "ar": "مكتب"
+      },
+      "noon": {
+        "en": "twelve o'clock in the middle of the day",
+        "ar": "الظهر"
+      },
+      "calendar": {
+        "en": "a list of the days and months of the year",
+        "ar": "تقويم"
+      },
+      "register": {
+        "en": "to put your name on an official list",
+        "ar": "يسجّل"
+      },
+      "exam": {
+        "en": "an official test",
+        "ar": "اختبار"
+      }
+    },
+    "questions": [
+      {
+        "q": "When does the semester start?",
+        "o": [
+          "On September 8",
+          "On September 7",
+          "In December",
+          "On Thursday"
+        ],
+        "a": 1,
+        "why": "Nora says <b>It starts on September 7</b>.",
+        "whyAr": "تقول نورة إن الفصل يبدأ في 7 سبتمبر."
+      },
+      {
+        "q": "Why does Ali come to the office?",
+        "o": [
+          "To pay for a book",
+          "To meet a classmate",
+          "To ask about dates and registration",
+          "To take an exam"
+        ],
+        "a": 2,
+        "why": "All his questions are about the semester, the calendar and registration.",
+        "whyAr": "كل أسئلته تتعلق بالفصل الدراسي والتقويم والتسجيل."
+      },
+      {
+        "q": "The exam week is ___ December.",
+        "o": [
+          "on",
+          "at",
+          "to",
+          "in"
+        ],
+        "a": 3,
+        "why": "We use <b>in</b> with months: <b>in December</b>.",
+        "whyAr": "نستخدم in مع أسماء الشهور: in December."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the dates and the office hours.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر التواريخ وساعات العمل."
+    }
   },
   quiz: [
     {

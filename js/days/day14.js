@@ -5,7 +5,7 @@ DAYS[14] = {
   titleAr: "لأنّ، لذلك، لكن",
   goal: "I can link past sentences with and, but, because and so, and write five connected sentences.",
   goalAr: "أستطيع ربط جمل الماضي باستخدام and وbut وbecause وso، وكتابة خمس جمل مترابطة.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 3, write: 6, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "decide", pos: "verb", ex: "She decided to study at the library.", ar: "يقرّر" },
     { en: "reason", pos: "noun", ex: "The reason for my delay was the traffic.", ar: "سبب" },
@@ -16,7 +16,9 @@ DAYS[14] = {
     { en: "cancel", pos: "verb", ex: "The teacher canceled the class because she was sick.", ar: "يلغي" },
     { en: "lose", pos: "verb", ex: "Don't lose your ticket.", ar: "يضيّع" },
     { en: "noisy", pos: "adjective", ex: "The room was noisy, so I left.", ar: "مزعج، كثير الضجيج" },
-    { en: "important", pos: "adjective", ex: "The test was important, so he studied hard.", ar: "مهم" }
+    { en: "important", pos: "adjective", ex: "The test was important, so he studied hard.", ar: "مهم" },
+    { en: "solve", pos: "verb", ex: "We solved the problem in ten minutes.", ar: "يحلّ" },
+    { en: "mistake", pos: "noun", ex: "I corrected two mistakes in my paragraph.", ar: "خطأ" }
   ],
   reading: {
     title: "Sami's study day",
@@ -85,6 +87,126 @@ DAYS[14] = {
     ],
     model: "Last Sunday, I decided to visit my aunt. I missed the first bus because I was late. It was cold, so I waited inside the station. The second bus was full, but I found a seat. I arrived at noon, and my aunt was happy to see me.",
     aiPrompt: "I am learning English at level A2. Please check my five sentences about a day when something went wrong. Correct the grammar, especially because, so, but, and, commas and past verbs. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "I lost the file",
+    "titleAr": "فقدتُ الملف",
+    "setting": "Two students talk about a late report and a small mistake.",
+    "settingAr": "طالبان يتحدثان عن تقرير متأخر وعن خطأ صغير.",
+    "lines": [
+      {
+        "speaker": "Sam",
+        "text": "Layla, you look worried. What is the matter?"
+      },
+      {
+        "speaker": "Layla",
+        "text": "I made a mistake, so my report was late."
+      },
+      {
+        "speaker": "Sam",
+        "text": "What happened exactly?"
+      },
+      {
+        "speaker": "Layla",
+        "text": "I saved the file in the wrong folder, and I lost it."
+      },
+      {
+        "speaker": "Sam",
+        "text": "That is bad, but you can write it again."
+      },
+      {
+        "speaker": "Layla",
+        "text": "I started again last night, because the delay was my fault."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Be careful with the names of your files."
+      },
+      {
+        "speaker": "Layla",
+        "text": "I know. Now I always save two copies of my work."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Good idea. A small habit solves a big problem."
+      },
+      {
+        "speaker": "Layla",
+        "text": "True. I lost two hours, but I learned a lesson."
+      }
+    ],
+    "gloss": {
+      "worried": {
+        "en": "feeling that something bad may happen",
+        "ar": "قلِق"
+      },
+      "mistake": {
+        "en": "something you do wrong",
+        "ar": "خطأ"
+      },
+      "folder": {
+        "en": "a place on a computer for files",
+        "ar": "مجلد"
+      },
+      "delay": {
+        "en": "extra time before something happens",
+        "ar": "تأخير"
+      },
+      "careful": {
+        "en": "giving attention so you do not make mistakes",
+        "ar": "حَذِر"
+      },
+      "habit": {
+        "en": "something you do often and regularly",
+        "ar": "عادة"
+      },
+      "solves": {
+        "en": "finds an answer to a problem",
+        "ar": "يحلّ"
+      }
+    },
+    "questions": [
+      {
+        "q": "Why was Layla's report late?",
+        "o": [
+          "She was sick for two days",
+          "She forgot the topic",
+          "The teacher changed the date",
+          "She lost the file"
+        ],
+        "a": 3,
+        "why": "She saved the file in the wrong folder and lost it.",
+        "whyAr": "حفظت الملف في مجلد خطأ ففقدته."
+      },
+      {
+        "q": "What does Sam advise Layla to do?",
+        "o": [
+          "To be careful with her file names",
+          "To write a longer report",
+          "To work only at night",
+          "To ask for a new topic"
+        ],
+        "a": 0,
+        "why": "He says <b>Be careful with the names of your files</b>.",
+        "whyAr": "يقول لها: انتبهي لأسماء ملفاتك."
+      },
+      {
+        "q": "I started again last night, ___ the delay was my fault.",
+        "o": [
+          "so",
+          "because",
+          "but",
+          "and"
+        ],
+        "a": 1,
+        "why": "<b>Because</b> introduces a reason.",
+        "whyAr": "كلمة because تُقدّم السبب."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Use and, but, because and so.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واستخدم and وbut وbecause وso."
+    }
   },
   quiz: [
     {

@@ -5,7 +5,7 @@ DAYS[28] = {
   titleAr: "أدوات الربط في الكتابة",
   goal: "I can use connectors such as however, for example, in addition and therefore with correct punctuation to link ideas in a paragraph.",
   goalAr: "أستطيع استخدام أدوات الربط مثل however وfor example وin addition وtherefore بعلامات ترقيم صحيحة لربط الأفكار في الفقرة.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 7, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "disadvantage", pos: "noun", ex: "A disadvantage of a small room is the lack of space.", ar: "عيب" },
     { en: "drawback", pos: "noun", ex: "The only drawback of this phone is its price.", ar: "سلبية، عيب" },
@@ -16,7 +16,9 @@ DAYS[28] = {
     { en: "result", pos: "noun", ex: "The result of the test was better than I expected.", ar: "نتيجة" },
     { en: "connect", pos: "verb", ex: "Connectors help you connect your ideas.", ar: "يربط" },
     { en: "common", pos: "adjective", ex: "Headaches are a common problem for students.", ar: "شائع" },
-    { en: "necessary", pos: "adjective", ex: "A good internet connection is necessary for online study.", ar: "ضروري" }
+    { en: "necessary", pos: "adjective", ex: "A good internet connection is necessary for online study.", ar: "ضروري" },
+    { en: "benefit", pos: "noun", ex: "One benefit of early study is a quiet house.", ar: "فائدة" },
+    { en: "contrast", pos: "noun", ex: "There is a clear contrast between the two plans.", ar: "تباين / اختلاف واضح" }
   ],
   reading: {
     title: "Online classes or classroom?",
@@ -82,6 +84,118 @@ DAYS[28] = {
     ],
     model: "Riding a bike to the university has several benefits and one main disadvantage. First, it is cheap. For example, I do not pay for a bus ticket or for gas. In addition, it is good exercise, and it can reduce stress. Second, it is often faster than the bus in a busy city. However, a bike is not always a good option. When the weather is very hot or rainy, it is difficult to ride. Therefore, I use the bus on those days. On the other hand, on a nice day, a bike is my first choice. Finally, I think a bike is a useful option for most students.",
     aiPrompt: "I am learning English at level B1. Please check my paragraph about the advantages and disadvantages of one option. Check the connectors (however, for example, in addition, therefore, first, finally), the commas, and any comma splices. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Online classes: two sides",
+    "titleAr": "الدراسة عبر الإنترنت: وجهان",
+    "setting": "Two students plan a paragraph about online classes with connectors.",
+    "settingAr": "طالبان يخططان لفقرة عن الدراسة عبر الإنترنت باستخدام أدوات الربط.",
+    "lines": [
+      {
+        "speaker": "Hamza",
+        "text": "Nora, I'm writing about online classes. What is the main benefit?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "Students save time. In addition, the videos stay online for review."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "And the biggest drawback?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "There is less speaking practice. In contrast, a classroom gives you real discussion."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "So the two options are quite different. How do I finish the paragraph?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "Start your last sentence with Overall. Say which one you prefer, and clarify why."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "I prefer the classroom. Therefore, I'll write that in my last sentence."
+      },
+      {
+        "speaker": "Nora",
+        "text": "Good. However, you should mention one benefit of online study too."
+      }
+    ],
+    "gloss": {
+      "benefit": {
+        "en": "a good result or advantage",
+        "ar": "فائدة"
+      },
+      "addition": {
+        "en": "one more thing after the first",
+        "ar": "إضافة"
+      },
+      "drawback": {
+        "en": "a bad point or disadvantage",
+        "ar": "عيب / سلبية"
+      },
+      "contrast": {
+        "en": "a clear difference between two things",
+        "ar": "تباين"
+      },
+      "options": {
+        "en": "the different choices",
+        "ar": "خيارات"
+      },
+      "overall": {
+        "en": "thinking about everything together",
+        "ar": "بشكل عام"
+      },
+      "clarify": {
+        "en": "to make something clearer",
+        "ar": "يُوضّح"
+      }
+    },
+    "questions": [
+      {
+        "q": "What does Nora say is a drawback of online classes?",
+        "o": [
+          "Fewer videos",
+          "Less speaking practice",
+          "A longer schedule",
+          "More expensive fees"
+        ],
+        "a": 1,
+        "why": "She says <b>There is less speaking practice</b>.",
+        "whyAr": "تقول إن ممارسة المحادثة أقل في الدراسة عبر الإنترنت."
+      },
+      {
+        "q": "What should Hamza put in his last sentence?",
+        "o": [
+          "A list of all the benefits",
+          "A question for the reader",
+          "His own preference and the reason",
+          "The title of the paragraph"
+        ],
+        "a": 2,
+        "why": "Nora says he should say which option he prefers and clarify why.",
+        "whyAr": "تقول نورة إن عليه أن يذكر الخيار الذي يفضّله ويوضّح السبب."
+      },
+      {
+        "q": "___, the classroom gives more real discussion.",
+        "o": [
+          "For example",
+          "In addition",
+          "Because",
+          "In contrast"
+        ],
+        "a": 3,
+        "why": "<b>In contrast</b> introduces an opposite idea.",
+        "whyAr": "عبارة In contrast تُقدّم فكرة معاكسة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Use in addition, however and therefore.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، واستخدم in addition وhowever وtherefore."
+    }
   },
   quiz: [
     {

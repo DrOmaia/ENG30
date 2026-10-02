@@ -31,7 +31,7 @@
     var root = document.getElementById("practice");
     var mode = "dictation", unit = 0, queue = [], idx = 0;
     root.innerHTML = '<h1>Practice</h1>' + ar("تدريب") + '<p class="muted">Extra listening and speaking practice from all the lessons. Nothing here is graded.</p>' + speechNote +
-      '<div class="seg" role="group" aria-label="Practice type" id="pmode"><button type="button" data-m="dictation" aria-pressed="true">Dictation</button><button type="button" data-m="speaking" aria-pressed="false">Speaking</button></div>' +
+      '<div class="seg" role="group" aria-label="Practice type" id="pmode"><button type="button" data-m="dictation" aria-pressed="true">Dictation</button><button type="button" data-m="speaking" aria-pressed="false">Speaking</button><button type="button" data-m="dialogue" aria-pressed="false">Dialogues</button></div>' +
       '<div class="field"><label for="punit">Unit</label><select id="punit"><option value="0">All units</option>' + C.units.map(function (u) { return '<option value="' + u.n + '">Unit ' + u.n + ": " + esc(u.title) + "</option>"; }).join("") + "</select></div>" +
       '<div id="pbody"></div>';
     function pool() {
@@ -40,6 +40,7 @@
         var D = window.DAYS && DAYS[n], m = metaOf(n); if (!D || (unit && m.unit !== unit)) return;
         if (mode === "dictation" && D.listening) D.listening.items.forEach(function (it) { out.push({ d: n, text: it.text, hint: it.hintAr }); });
         if (mode === "speaking" && D.speaking) out.push({ d: n, text: D.speaking.script, checklist: D.speaking.checklist });
+        if (mode === "dialogue" && D.dialogue) out.push({ d: n, dlg: D.dialogue });
       });
       return out;
     }
@@ -48,7 +49,22 @@
       var body = root.querySelector("#pbody");
       if (!queue.length) { body.innerHTML = '<p class="muted">No practice items for this choice yet.</p>'; return; }
       var it = queue[idx % queue.length];
-      if (mode === "dictation") {
+      if (mode === "dialogue") {
+        var L = it.dlg, sp = []; L.lines.forEach(function (l) { if (sp.indexOf(l.speaker) < 0) sp.push(l.speaker); });
+        body.innerHTML = '<div class="dict-item"><p class="muted">Dialogue ' + (idx % queue.length + 1) + " of " + queue.length + " &middot; from Day " + it.d + "</p><h2>" + esc(L.title) + "</h2>" + ar(L.titleAr) + "<p>" + esc(L.setting) + "</p>" +
+          '<div class="btn-row"><button type="button" class="btn btn-soft btn-sm" id="pplay">Play the whole dialogue</button><button type="button" class="btn btn-ghost btn-sm" id="phide" aria-pressed="false">Hide the text and just listen</button><button type="button" class="btn btn-primary btn-sm" id="pnext">Next dialogue</button></div>' +
+          '<ol class="dlg reading" id="pdlg" lang="en">' + L.lines.map(function (l) { return '<li class="dl"><b class="spk">' + esc(l.speaker) + ":</b> <span class=\"dlg-text\">" + esc(l.text) + "</span></li>"; }).join("") + "</ol>" +
+          (L.roleplay ? '<div class="callout"><div class="ttl">Role-play</div><p>' + esc(L.roleplay.prompt) + "</p>" + ar(L.roleplay.promptAr) + "</div>" : "") + "</div>";
+        var pl = body.querySelector("#pplay"), ph = body.querySelector("#phide"), pd = body.querySelector("#pdlg");
+        var pitems = L.lines.map(function (l) { return { text: l.text, who: sp.indexOf(l.speaker) }; });
+        var pclear = function () { pd.querySelectorAll(".now").forEach(function (x) { x.classList.remove("now"); }); pl.textContent = "Play the whole dialogue"; pl.setAttribute("aria-pressed", "false"); };
+        pl.onclick = function () {
+          if (pl.getAttribute("aria-pressed") === "true") { E.speech.stop(); pclear(); return; }
+          pl.setAttribute("aria-pressed", "true"); pl.textContent = "Stop";
+          E.speech.speakSeq(pitems, false, { line: function (i) { pd.querySelectorAll(".now").forEach(function (x) { x.classList.remove("now"); }); pd.children[i].classList.add("now"); }, done: pclear });
+        };
+        ph.onclick = function () { var on = ph.getAttribute("aria-pressed") !== "true"; ph.setAttribute("aria-pressed", on ? "true" : "false"); pd.classList.toggle("dlg-hidden", on); ph.textContent = on ? "Show the text" : "Hide the text and just listen"; };
+      } else if (mode === "dictation") {
         body.innerHTML = '<div class="dict-item"><p class="muted">Item ' + (idx % queue.length + 1) + " of " + queue.length + " &middot; from Day " + it.d + '</p><div class="btn-row">' + audio(it.text, false) + audio(it.text, true) + "</div>" +
           '<label class="sr-only" for="pd">Type what you hear</label><textarea id="pd" rows="2" lang="en" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type what you hear"></textarea>' +
           '<div class="btn-row"><button type="button" class="btn btn-soft btn-sm" id="pcheck">Check</button><button type="button" class="btn btn-ghost btn-sm" id="pshow">Show the sentence</button><button type="button" class="btn btn-primary btn-sm" id="pnext">Next sentence</button></div><div id="pout" aria-live="polite"></div></div>';

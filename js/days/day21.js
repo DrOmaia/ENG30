@@ -5,7 +5,7 @@ DAYS[21] = {
   titleAr: "الخطط المستقبلية",
   goal: "I can talk about my plans and make predictions and promises using will and going to.",
   goalAr: "أستطيع الحديث عن خططي وتوقّعاتي ووعودي باستخدام will وgoing to.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 3, write: 6, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "future", pos: "noun", ex: "I think about my future every day.", ar: "المستقبل" },
     { en: "plan", pos: "noun", ex: "My plan is to study in Canada.", ar: "خطة" },
@@ -16,7 +16,9 @@ DAYS[21] = {
     { en: "probably", pos: "adverb", ex: "It will probably be sunny tomorrow.", ar: "على الأرجح" },
     { en: "soon", pos: "adverb", ex: "The class will start soon.", ar: "قريبًا" },
     { en: "career", pos: "noun", ex: "He wants a career in engineering.", ar: "مسار مهني" },
-    { en: "umbrella", pos: "noun", ex: "Take an umbrella because it is going to rain.", ar: "مظلّة" }
+    { en: "umbrella", pos: "noun", ex: "Take an umbrella because it is going to rain.", ar: "مظلّة" },
+    { en: "intend", pos: "verb", ex: "I intend to finish my degree in four years.", ar: "ينوي" },
+    { en: "arrange", pos: "verb", ex: "She arranged a meeting with her advisor.", ar: "يُرتّب (موعدًا أو لقاءً)" }
   ],
   reading: {
     title: "Reem's plans",
@@ -84,6 +86,118 @@ DAYS[21] = {
     ],
     model: "Next year, I'm going to start a new course at the university. I'm also going to join a study group, and we are going to meet every Saturday. My goal is to speak English with confidence. In two years, I want to work in a hospital. I think the first term will be difficult, but I'll study a little every day. I promise I won't give up. I hope my family will be proud of me. Soon, I'll buy the books I need.",
     aiPrompt: "I am learning English at level B1. Please check my text about my plans for next year. Correct the grammar, especially will and going to, the base verb after will, and time expressions. Explain each mistake in simple words and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Plans after the exams",
+    "titleAr": "خطط بعد الاختبارات",
+    "setting": "Two students talk about their plans for the months after the exams.",
+    "settingAr": "طالبان يتحدثان عن خططهما للأشهر التي تلي الاختبارات.",
+    "lines": [
+      {
+        "speaker": "Reem",
+        "text": "Omar, what are you going to do after the exams?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I'm going to work in my uncle's office for one month."
+      },
+      {
+        "speaker": "Reem",
+        "text": "That is a great opportunity. Will you study abroad next year?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Maybe. I intend to apply for a program in Dubai."
+      },
+      {
+        "speaker": "Reem",
+        "text": "I'll help you with the forms if you want."
+      },
+      {
+        "speaker": "Omar",
+        "text": "Thank you. I'm going to arrange a meeting with the advisor first."
+      },
+      {
+        "speaker": "Reem",
+        "text": "Good. I think you'll get a clear answer very soon."
+      },
+      {
+        "speaker": "Omar",
+        "text": "I hope so. I'll call you after the meeting on Tuesday."
+      }
+    ],
+    "gloss": {
+      "opportunity": {
+        "en": "a good chance to do something",
+        "ar": "فرصة"
+      },
+      "abroad": {
+        "en": "in another country",
+        "ar": "في الخارج"
+      },
+      "intend": {
+        "en": "to plan to do something",
+        "ar": "ينوي"
+      },
+      "apply": {
+        "en": "to ask officially for a place or a job",
+        "ar": "يتقدّم بطلب"
+      },
+      "program": {
+        "en": "an organized course of study",
+        "ar": "برنامج"
+      },
+      "arrange": {
+        "en": "to plan and organize something",
+        "ar": "يُرتّب"
+      },
+      "advisor": {
+        "en": "a person who gives official advice to students",
+        "ar": "مرشد أكاديمي"
+      }
+    },
+    "questions": [
+      {
+        "q": "What will Omar do for one month?",
+        "o": [
+          "Work in his uncle's office",
+          "Study in Dubai",
+          "Travel with Reem",
+          "Rest at home"
+        ],
+        "a": 0,
+        "why": "He says <b>I'm going to work in my uncle's office for one month</b>.",
+        "whyAr": "يقول إنه سيعمل في مكتب عمّه لمدة شهر."
+      },
+      {
+        "q": "Why does Reem offer to help with the forms?",
+        "o": [
+          "She needs a job in the office",
+          "She wants to support Omar's plan",
+          "She is going to Dubai too",
+          "She works with the advisor"
+        ],
+        "a": 1,
+        "why": "Omar wants to apply for a program, and she offers help with the paperwork.",
+        "whyAr": "عمر ينوي التقدّم لبرنامج، فتعرض عليه المساعدة في الأوراق."
+      },
+      {
+        "q": "Which sentence shows a plan that he already decided?",
+        "o": [
+          "I'll call you after the meeting.",
+          "Maybe I will study abroad.",
+          "I'm going to arrange a meeting.",
+          "I hope so."
+        ],
+        "a": 2,
+        "why": "<b>Going to</b> shows a decision that the speaker made before now.",
+        "whyAr": "صيغة going to تدل على قرار اتخذه المتحدث قبل الآن."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Talk about your plan for next month.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وتحدّث عن خطتك للشهر القادم."
+    }
   },
   quiz: [
     {

@@ -5,7 +5,7 @@ DAYS[1] = {
   titleAr: "التعريف بالنفس",
   goal: "I can greet people, say my name and where I am from, and introduce a classmate.",
   goalAr: "أستطيع أن ألقي التحية، وأذكر اسمي وبلدي، وأقدّم زميلًا لي.",
-  plan: { words: 3, read: 4, focus: 5, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "hello", pos: "interjection", ex: "Hello! My name is Omar.", ar: "مرحبًا" },
     { en: "name", pos: "noun", ex: "What is your name?", ar: "اسم" },
@@ -16,7 +16,9 @@ DAYS[1] = {
     { en: "from", pos: "preposition", ex: "I am from Amman.", ar: "من (بلد أو مدينة)" },
     { en: "country", pos: "noun", ex: "My country is Jordan.", ar: "بلد" },
     { en: "neighbor", pos: "noun", ex: "My neighbor is a doctor.", ar: "جار / جارة" },
-    { en: "welcome", pos: "interjection", ex: "Welcome to our class!", ar: "أهلًا وسهلًا" }
+    { en: "welcome", pos: "interjection", ex: "Welcome to our class!", ar: "أهلًا وسهلًا" },
+    { en: "badge", pos: "noun", ex: "My badge has my name and my photo on it.", ar: "بطاقة تعريف" },
+    { en: "major", pos: "noun", ex: "Her major is engineering.", ar: "التخصص الجامعي" }
   ],
   reading: {
     title: "The first day",
@@ -87,6 +89,114 @@ The teacher says, "Welcome, everyone! You are classmates now." We are happy. We 
     ],
     model: "Hello! My name is Huda. I am from Muscat. I am a student, and I am in this class to learn English. This is my friend Karim. He is from Cairo. He is not a student. He is an engineer. We are neighbors. Karim is very kind.",
     aiPrompt: "I am an A2 English learner. Please check this short introduction for mistakes with am, is and are, and explain each correction simply: [paste your text here]"
+  },
+  dialogue: {
+    "title": "The first class",
+    "titleAr": "أول حصة",
+    "setting": "Two new students meet in a hallway before their first class.",
+    "settingAr": "طالبان جديدان يتعارفان في الممر قبل أول حصة لهما.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "Hi, I'm Sara. Are you a new student?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes, I am. My name is Omar."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Nice to meet you, Omar. Where are you from?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "I'm from Amman, in Jordan. And you?"
+      },
+      {
+        "speaker": "Sara",
+        "text": "I'm from Cairo. My major is computer science."
+      },
+      {
+        "speaker": "Omar",
+        "text": "Really? My major is business administration."
+      },
+      {
+        "speaker": "Sara",
+        "text": "Is this your first class today?"
+      },
+      {
+        "speaker": "Omar",
+        "text": "Yes. The teacher is new too. Her name is Dr. Rana."
+      }
+    ],
+    "gloss": {
+      "student": {
+        "en": "a person who studies at a school or college",
+        "ar": "طالب"
+      },
+      "name": {
+        "en": "the word that people call you",
+        "ar": "اسم"
+      },
+      "major": {
+        "en": "the main subject of a college program",
+        "ar": "التخصص"
+      },
+      "class": {
+        "en": "a group of students in one lesson",
+        "ar": "حصة / صف"
+      },
+      "teacher": {
+        "en": "a person who teaches a class",
+        "ar": "مُعلّم"
+      },
+      "business": {
+        "en": "the study of money, trade and companies",
+        "ar": "إدارة الأعمال"
+      }
+    },
+    "questions": [
+      {
+        "q": "Where is Omar from?",
+        "o": [
+          "Amman",
+          "Cairo",
+          "Dubai",
+          "Istanbul"
+        ],
+        "a": 0,
+        "why": "Omar says <b>I'm from Amman</b>.",
+        "whyAr": "يقول عمر I'm from Amman، أي إنه من عمّان."
+      },
+      {
+        "q": "Why does Sara say <i>Nice to meet you</i>?",
+        "o": [
+          "Because she is leaving the class",
+          "Because they are meeting for the first time",
+          "Because she is sorry",
+          "Because she is the teacher"
+        ],
+        "a": 1,
+        "why": "We say <b>Nice to meet you</b> when we meet a person for the first time.",
+        "whyAr": "نقول Nice to meet you عند لقاء شخص للمرة الأولى."
+      },
+      {
+        "q": "Sara says <i>I'm Sara</i>. What is the full form?",
+        "o": [
+          "I are Sara",
+          "I is Sara",
+          "I am Sara",
+          "I be Sara"
+        ],
+        "a": 2,
+        "why": "With <b>I</b> we use <b>am</b>, and <b>I'm</b> is the short form of <b>I am</b>.",
+        "whyAr": "مع I نستخدم am، وI'm هي الصيغة المختصرة من I am."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Change the cities and the majors.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وغيّر المدن والتخصصات."
+    }
   },
   quiz: [
     {

@@ -5,7 +5,7 @@ DAYS[11] = {
   titleAr: "قصة تعليمي",
   goal: "I can tell a short story about my school and university years in the past.",
   goalAr: "أستطيع أن أروي قصة قصيرة عن سنوات دراستي في المدرسة والجامعة بصيغة الماضي.",
-  plan: { words: 3, read: 3, focus: 5, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 5, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "graduate", pos: "verb", ex: "She graduated from the university last year.", ar: "يتخرّج" },
     { en: "apply", pos: "verb", ex: "I applied to three universities last spring.", ar: "يتقدّم بطلب" },
@@ -16,7 +16,9 @@ DAYS[11] = {
     { en: "fail", pos: "verb", ex: "He failed the test, so he studied again.", ar: "يرسب في" },
     { en: "practice", pos: "verb", ex: "We practiced English every day last month.", ar: "يتمرّن" },
     { en: "elementary school", pos: "noun", ex: "My brother started elementary school two years ago.", ar: "المدرسة الابتدائية" },
-    { en: "scholarship", pos: "noun", ex: "She received a scholarship to study abroad.", ar: "منحة دراسية" }
+    { en: "scholarship", pos: "noun", ex: "She received a scholarship to study abroad.", ar: "منحة دراسية" },
+    { en: "certificate", pos: "noun", ex: "I showed my certificate to the registration office.", ar: "شهادة (ورقة رسمية)" },
+    { en: "transfer", pos: "verb", ex: "She transferred to another college last year.", ar: "ينتقل / يُحوِّل" }
   ],
   reading: {
     title: "Layla's education story",
@@ -81,6 +83,126 @@ DAYS[11] = {
     ],
     model: "I was born in 2002. I started elementary school when I was six. My favorite subject was science. I finished high school in 2020. I wanted to study computers, so I applied to a university. The first year was difficult, but I studied every day. I graduated last year, and today I work in an office.",
     aiPrompt: "I am learning English at level A2. Please check my short text about my education story. Correct the grammar (especially was/were and -ed verbs), explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Where were you in high school?",
+    "titleAr": "أين كنت في المرحلة الثانوية؟",
+    "setting": "Two students talk about their school years and their old city.",
+    "settingAr": "طالبان يتحدثان عن سنوات دراستهما المدرسية وعن مدينتهما القديمة.",
+    "lines": [
+      {
+        "speaker": "Lina",
+        "text": "Ali, where were you in high school?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "I was in Dubai. My family lived there for six years."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Was the school big?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "Yes, it was. I studied science and I liked my teachers."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Why did you move to Cairo?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "My father changed jobs, so I transferred to a school here in 2019."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Was the first year difficult for you?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "A little. But I worked hard and I passed all my exams."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Do you still have your school certificate?"
+      },
+      {
+        "speaker": "Ali",
+        "text": "Yes, it's at home. The effort was worth it."
+      }
+    ],
+    "gloss": {
+      "lived": {
+        "en": "had a home in a place",
+        "ar": "عاش / سكن"
+      },
+      "studied": {
+        "en": "learned a subject at school",
+        "ar": "درس"
+      },
+      "transferred": {
+        "en": "moved from one school or city to another",
+        "ar": "انتقل"
+      },
+      "worked": {
+        "en": "made an effort, did a job",
+        "ar": "عمل / اجتهد"
+      },
+      "passed": {
+        "en": "got a good enough result in a test",
+        "ar": "نجح"
+      },
+      "certificate": {
+        "en": "an official paper that shows your result",
+        "ar": "شهادة"
+      },
+      "effort": {
+        "en": "hard work and energy",
+        "ar": "جهد"
+      }
+    },
+    "questions": [
+      {
+        "q": "Where was Ali in high school?",
+        "o": [
+          "In Cairo",
+          "In Amman",
+          "In Dubai",
+          "In Istanbul"
+        ],
+        "a": 2,
+        "why": "Ali says <b>I was in Dubai</b>.",
+        "whyAr": "يقول علي إنه كان في دبي."
+      },
+      {
+        "q": "Why did Ali's family move to Cairo?",
+        "o": [
+          "The school was too small",
+          "He failed his exams",
+          "He wanted a new certificate",
+          "His father changed his job"
+        ],
+        "a": 3,
+        "why": "He says <b>My father changed jobs</b>, so he transferred to a school here.",
+        "whyAr": "يقول إن والده غيّر عمله، لذلك انتقلت الأسرة."
+      },
+      {
+        "q": "___ the school big?",
+        "o": [
+          "Was",
+          "Were",
+          "Did",
+          "Is"
+        ],
+        "a": 0,
+        "why": "<b>The school</b> is singular, so we use the past form <b>was</b>.",
+        "whyAr": "كلمة the school مفردة، لذلك نستخدم was في الماضي."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Talk about your own school years.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وتحدّث عن سنوات دراستك المدرسية."
+    }
   },
   quiz: [
     {

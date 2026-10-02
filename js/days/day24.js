@@ -5,7 +5,7 @@ DAYS[24] = {
   titleAr: "الآراء والأسباب",
   goal: "I can give an opinion with a reason, ask for someone's opinion, and disagree politely.",
   goalAr: "أستطيع أن أعبّر عن رأيي مع ذكر السبب، وأن أسأل عن رأي الآخرين، وأن أختلف معهم بأدب.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 5, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "opinion", pos: "noun", ex: "In my opinion, online classes are useful.", ar: "رأي" },
     { en: "agree", pos: "verb", ex: "I agree with you about the exam.", ar: "يوافق" },
@@ -17,7 +17,8 @@ DAYS[24] = {
     { en: "choice", pos: "noun", ex: "Home is a good choice for a flexible student.", ar: "اختيار" },
     { en: "flexible", pos: "adjective", ex: "I like a flexible study plan.", ar: "مرن" },
     { en: "distraction", pos: "noun", ex: "My phone is a big distraction.", ar: "ما يشتّت الانتباه" },
-    { en: "concentrate", pos: "verb", ex: "I cannot concentrate when it is noisy.", ar: "يركّز" }
+    { en: "concentrate", pos: "verb", ex: "I cannot concentrate when it is noisy.", ar: "يركّز" },
+    { en: "argue", pos: "verb", ex: "She argues that short lectures work better.", ar: "يحتجّ بأنّ / يرى مستدلًّا (في الكتابة الأكاديمية)" }
   ],
   reading: {
     title: "Library or home?",
@@ -85,6 +86,118 @@ DAYS[24] = {
     ],
     model: "In my opinion, classroom classes are better than online classes. One reason is that I can ask the teacher a question right away. Another reason is that I can concentrate more in a quiet classroom. But online classes have a big advantage: they are flexible because I can watch them at any time. I think the best plan is to use both. I believe a mix gives students the benefits of each way.",
     aiPrompt: "I am learning English at level B1. Please check my short opinion paragraph about [your topic]. Correct the grammar, explain each mistake in simple words, check that my reasons are clear and my disagreement is polite, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Group projects: good or bad?",
+    "titleAr": "المشروعات الجماعية: جيدة أم سيئة؟",
+    "setting": "Two students discuss group projects and give reasons for their opinions.",
+    "settingAr": "طالبان يتناقشان في المشروعات الجماعية ويقدّمان أسبابًا لآرائهما.",
+    "lines": [
+      {
+        "speaker": "Huda",
+        "text": "Hamza, what is your opinion about group projects?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "In my view, they are useful because we share ideas."
+      },
+      {
+        "speaker": "Huda",
+        "text": "I see your point, but I do not completely agree."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "Why not? Tell me your reason."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Some students do very little work. That isn't fair to the others."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "That is a good argument. What do you suggest?"
+      },
+      {
+        "speaker": "Huda",
+        "text": "The teacher should give each member a clear role."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "I like that idea. Then everyone can see who did each part."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Exactly. From my point of view, clear roles solve most problems."
+      }
+    ],
+    "gloss": {
+      "opinion": {
+        "en": "what a person thinks about something",
+        "ar": "رأي"
+      },
+      "view": {
+        "en": "an opinion about a subject",
+        "ar": "وجهة نظر"
+      },
+      "agree": {
+        "en": "to have the same opinion",
+        "ar": "يوافق"
+      },
+      "fair": {
+        "en": "right and equal for everyone",
+        "ar": "عادل / منصف"
+      },
+      "argument": {
+        "en": "a reason that supports an opinion",
+        "ar": "حجّة"
+      },
+      "suggest": {
+        "en": "to offer an idea",
+        "ar": "يقترح"
+      }
+    },
+    "questions": [
+      {
+        "q": "What does Huda suggest?",
+        "o": [
+          "Working alone on every project",
+          "Giving each member a clear role",
+          "Asking for a longer deadline",
+          "Changing the teacher's plan"
+        ],
+        "a": 1,
+        "why": "She says <b>The teacher should give each member a clear role</b>.",
+        "whyAr": "تقول إن على المعلّم أن يمنح كل عضو دورًا واضحًا."
+      },
+      {
+        "q": "Why does Huda disagree with Hamza?",
+        "o": [
+          "Because she does not like his ideas",
+          "Because group work is too easy",
+          "Because some students do very little work",
+          "Because the teacher gives no points"
+        ],
+        "a": 2,
+        "why": "Her reason is that the work is not shared fairly.",
+        "whyAr": "سببها أن العمل لا يُوزّع بإنصاف."
+      },
+      {
+        "q": "Which phrase introduces a polite disagreement?",
+        "o": [
+          "You are wrong.",
+          "That is not true at all.",
+          "I do not want to talk.",
+          "I see your point, but ..."
+        ],
+        "a": 3,
+        "why": "<b>I see your point, but ...</b> shows respect before a different opinion.",
+        "whyAr": "عبارة I see your point, but ... تُظهر الاحترام قبل إبداء رأي مختلف."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Give an opinion and one reason, then disagree politely.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وقدّم رأيًا وسببًا واحدًا، ثم اعترض بأدب."
+    }
   },
   quiz: [
     {

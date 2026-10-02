@@ -5,7 +5,7 @@ DAYS[19] = {
   titleAr: "عبارات المحاضرة وتدوين الملاحظات",
   goal: "I can follow the steps of a short lecture and write simple notes with keywords and abbreviations.",
   goalAr: "أستطيع أن أتابع خطوات محاضرة قصيرة وأكتب ملاحظات بسيطة بالكلمات المفتاحية والاختصارات.",
-  plan: { words: 3, read: 4, focus: 5, listen: 4, speak: 3, write: 5, quiz: 3 },
+  plan: { words: 3, read: 4, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 5, quiz: 3 },
   words: [
     { en: "lecturer", pos: "noun", ex: "The lecturer is speaking slowly today.", ar: "محاضِر" },
     { en: "slide", pos: "noun", ex: "The lecturer is showing a slide about sleep.", ar: "شريحة عرض" },
@@ -16,7 +16,9 @@ DAYS[19] = {
     { en: "handout", pos: "noun", ex: "The lecturer gives us a handout after the lecture.", ar: "ورقة توزَّع على الطلاب" },
     { en: "signpost", pos: "noun", ex: "First and finally are signposts in a talk.", ar: "كلمة إرشاد (تدلّ على خطوات الحديث)" },
     { en: "stress", pos: "noun", ex: "The stress in the word lecture is on the first part.", ar: "النبر (تأكيد على مقطع أو كلمة)" },
-    { en: "heading", pos: "noun", ex: "Write a heading for each main point in your notes.", ar: "عنوان فرعي" }
+    { en: "heading", pos: "noun", ex: "Write a heading for each main point in your notes.", ar: "عنوان فرعي" },
+    { en: "outline", pos: "noun", ex: "I write an outline before every report.", ar: "مخطط / هيكل" },
+    { en: "record", pos: "verb", ex: "He recorded the talk with permission.", ar: "يُسجّل (صوتًا أو فيديو)" }
   ],
   reading: {
     title: "A lecture about memory",
@@ -81,6 +83,122 @@ DAYS[19] = {
     ],
     model: "Notes: Topic = memory. 1) sleep 7-8 hrs > 4 hrs, e.g. +20% words. 2) short sessions (25 min) vs. 3 hrs. 3) review: same day + after 1 week.\n\nSummary: The lecture is about how students remember information. Sleep, short study sessions and review all help memory. Studying for hours without a break is not a good way to learn.",
     aiPrompt: "I am learning English at level B1. Please check my notes and summary of a short lecture. Tell me if I included the main ideas, show me better keywords and abbreviations, and correct the grammar in my summary in simple words. My text: [paste your notes here]"
+  },
+  dialogue: {
+    "title": "After the lecture",
+    "titleAr": "بعد المحاضرة",
+    "setting": "Two students compare their notes after a fast lecture.",
+    "settingAr": "طالبان يقارنان ملاحظاتهما بعد محاضرة سريعة.",
+    "lines": [
+      {
+        "speaker": "Ali",
+        "text": "Huda, did you take good notes today?"
+      },
+      {
+        "speaker": "Huda",
+        "text": "Yes. I wrote an outline with three main points."
+      },
+      {
+        "speaker": "Ali",
+        "text": "The lecturer spoke fast. I missed half the ideas."
+      },
+      {
+        "speaker": "Huda",
+        "text": "Listen for signpost phrases. First of all shows a new point."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Does she define the hard terms in the lecture?"
+      },
+      {
+        "speaker": "Huda",
+        "text": "Yes. When she says in other words, she explains a term again."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Can I record the next lecture on my phone?"
+      },
+      {
+        "speaker": "Huda",
+        "text": "Ask her first. I use short symbols instead."
+      },
+      {
+        "speaker": "Ali",
+        "text": "Good idea. I'm copying your outline tonight."
+      }
+    ],
+    "gloss": {
+      "outline": {
+        "en": "a short plan with the main points",
+        "ar": "مخطط / هيكل"
+      },
+      "lecturer": {
+        "en": "a teacher who gives lectures",
+        "ar": "محاضِر"
+      },
+      "signpost": {
+        "en": "a phrase that shows the next part of a talk",
+        "ar": "عبارة إرشادية"
+      },
+      "define": {
+        "en": "to explain the meaning of a word",
+        "ar": "يُعرّف"
+      },
+      "terms": {
+        "en": "words with a special meaning in a subject",
+        "ar": "مصطلحات"
+      },
+      "record": {
+        "en": "to keep sound or video on a device",
+        "ar": "يُسجّل"
+      },
+      "symbols": {
+        "en": "short signs that stand for words",
+        "ar": "رموز"
+      }
+    },
+    "questions": [
+      {
+        "q": "How many main points are in Huda's outline?",
+        "o": [
+          "Two",
+          "Four",
+          "Three",
+          "Five"
+        ],
+        "a": 2,
+        "why": "She says <b>an outline with three main points</b>.",
+        "whyAr": "تقول إن مخططها يضم ثلاث نقاط رئيسية."
+      },
+      {
+        "q": "What does <i>in other words</i> tell the student?",
+        "o": [
+          "The lecture is finished",
+          "A completely new topic starts",
+          "The lecturer is asking a question",
+          "An explanation of a term is coming"
+        ],
+        "a": 3,
+        "why": "The lecturer uses it before she explains a term again more simply.",
+        "whyAr": "تستخدمها المحاضِرة قبل أن تشرح المصطلح بصورة أبسط."
+      },
+      {
+        "q": "Huda says <i>I use short symbols</i>. This describes ___",
+        "o": [
+          "a habit",
+          "a past event",
+          "a future plan",
+          "an action happening now"
+        ],
+        "a": 0,
+        "why": "The present simple describes a habit.",
+        "whyAr": "المضارع البسيط يصف عادة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Add two more signpost phrases.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وأضف عبارتين إرشاديتين أخريين."
+    }
   },
   quiz: [
     {

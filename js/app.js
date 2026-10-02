@@ -152,7 +152,7 @@
   var speakingBtn = null;
   function speak(text, slow, btn) {
     if (!synth) return;
-    synth.cancel();
+    seqToken++; synth.cancel();
     if (speakingBtn) { speakingBtn.setAttribute("aria-pressed", "false"); speakingBtn = null; }
     var u = new SpeechSynthesisUtterance(text);
     var v = pickVoice(); if (v) u.voice = v;
@@ -163,7 +163,33 @@
     u.onend = end; u.onerror = end;
     synth.speak(u);
   }
-  function stopSpeaking() { if (synth) synth.cancel(); }
+  var seqToken = 0;
+  function stopSpeaking() { seqToken++; if (synth) synth.cancel(); }
+  // Voice for speaker 0 / 1: a second English voice if the device has one, otherwise the same voice with a different pitch.
+  function voiceFor(idx) {
+    var list = englishVoices(), v1 = pickVoice();
+    if (idx % 2 === 0) return { voice: v1, pitch: 1 };
+    var other = list.filter(function (v) { return v1 && v.voiceURI !== v1.voiceURI && /^en[-_]US$/i.test(v.lang); })[0] || list.filter(function (v) { return v1 && v.voiceURI !== v1.voiceURI; })[0];
+    return other ? { voice: other, pitch: 1 } : { voice: v1, pitch: 1.3 };
+  }
+  // Play items [{text, who}] one after another. hooks: line(i) before each line, done() at the end or when stopped by an error.
+  function speakSeq(items, slow, hooks) {
+    if (!synth) return;
+    stopSpeaking();
+    var my = ++seqToken, i = 0; hooks = hooks || {};
+    (function next() {
+      if (my !== seqToken) return;
+      if (i >= items.length) { if (hooks.done) hooks.done(); return; }
+      var it = items[i], idx = i; i++;
+      if (hooks.line) hooks.line(idx);
+      var u = new SpeechSynthesisUtterance(it.text), vf = voiceFor(it.who || 0);
+      if (vf.voice) { u.voice = vf.voice; u.lang = vf.voice.lang; } else u.lang = "en-US";
+      u.pitch = vf.pitch; u.rate = Math.max(0.4, Math.min(1.3, (state.settings.rate || 0.9) * (slow ? 0.7 : 1)));
+      u.onend = function () { if (my === seqToken) setTimeout(next, 250); };
+      u.onerror = function () { if (my === seqToken) { if (hooks.done) hooks.done(); } };
+      synth.speak(u);
+    })();
+  }
   // Delegated handler: any <button class="audio" data-say="..."> speaks.
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("button.audio[data-say]");
@@ -245,7 +271,7 @@
     addCards: addCards, dueCards: dueCards, gradeCard: gradeCard,
     toast: toast, copy: copy, download: download, setSetting: setSetting, applySettings: applySettings,
     renderChrome: renderChrome,
-    speech: { supported: !!synth, speak: speak, stop: stopSpeaking, voices: englishVoices, audioBtn: audioBtn, recognition: Recognition, refresh: refreshVoices },
+    speech: { supported: !!synth, speak: speak, speakSeq: speakSeq, stop: stopSpeaking, voices: englishVoices, audioBtn: audioBtn, recognition: Recognition, refresh: refreshVoices },
     exportData: function () { state.backup = today(); save(); return JSON.stringify(state, null, 2); },
     importData: function (txt) {
       var obj = JSON.parse(txt);

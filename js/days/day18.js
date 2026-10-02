@@ -5,7 +5,7 @@ DAYS[18] = {
   titleAr: "المقارنة بين الأشياء",
   goal: "I can compare cities, courses and study methods with comparatives, superlatives and as...as.",
   goalAr: "أستطيع المقارنة بين المدن والمقرّرات وطرق الدراسة باستخدام صيغ المقارنة والتفضيل وas...as.",
-  plan: { words: 3, read: 3, focus: 6, listen: 4, speak: 3, write: 8, quiz: 3 },
+  plan: { words: 3, read: 3, focus: 4, listen: 4, dialogue: 4, speak: 3, write: 6, quiz: 3 },
   words: [
     { en: "crowded", pos: "adjective", ex: "The train is crowded in the morning.", ar: "مزدحم" },
     { en: "convenient", pos: "adjective", ex: "The bus stop is convenient for students.", ar: "مناسب / مريح من حيث القرب" },
@@ -16,7 +16,9 @@ DAYS[18] = {
     { en: "boring", pos: "adjective", ex: "The first lecture was boring.", ar: "ممل" },
     { en: "practical", pos: "adjective", ex: "A dictionary is a practical tool for every learner.", ar: "عملي" },
     { en: "affordable", pos: "adjective", ex: "An online course is affordable for many students.", ar: "بسعر مناسب" },
-    { en: "quiet", pos: "adjective", ex: "The library is the quietest place on campus.", ar: "هادئ" }
+    { en: "quiet", pos: "adjective", ex: "The library is the quietest place on campus.", ar: "هادئ" },
+    { en: "efficient", pos: "adjective", ex: "Short notes are more efficient than full sentences in a lecture.", ar: "كفء (يوفّر الوقت والجهد)" },
+    { en: "similar", pos: "adjective", ex: "The two articles are similar in length.", ar: "متشابه" }
   ],
   reading: {
     title: "Two ways to study English",
@@ -80,6 +82,118 @@ DAYS[18] = {
     ],
     model: "I am comparing two study methods. Studying alone is quieter than studying in a group. It is also more useful than group work for difficult subjects. But group study is more interesting, and it is not as boring as studying alone. The library is the best place for me because it is more comfortable than my room. In my opinion, studying alone is better for exams.",
     aiPrompt: "I am learning English at level B1. Please check my text that compares two things. Correct my grammar (especially comparatives, superlatives, than and as...as), explain each mistake in simple words, and show me a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Which room is better?",
+    "titleAr": "أي قاعة أفضل؟",
+    "setting": "Two students compare two study rooms for their group work.",
+    "settingAr": "طالبان يقارنان بين قاعتَي دراسة من أجل عملهما الجماعي.",
+    "lines": [
+      {
+        "speaker": "Sam",
+        "text": "Nora, which room is better for group work?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "The new room. It's bigger, so our group work is more efficient there."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Is it quieter than the old room?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "No, the old room is quieter, but the number of chairs there is limited."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Are the two rooms similar in size?"
+      },
+      {
+        "speaker": "Nora",
+        "text": "The new one is larger. It also has more reliable internet."
+      },
+      {
+        "speaker": "Sam",
+        "text": "Then the new room is the best choice for Sunday."
+      },
+      {
+        "speaker": "Nora",
+        "text": "I agree. It is the most comfortable room in the building."
+      }
+    ],
+    "gloss": {
+      "efficient": {
+        "en": "working well without waste of time",
+        "ar": "فعّال"
+      },
+      "quieter": {
+        "en": "with less noise",
+        "ar": "أهدأ"
+      },
+      "limited": {
+        "en": "small in number or amount",
+        "ar": "محدود"
+      },
+      "similar": {
+        "en": "almost the same",
+        "ar": "متشابه"
+      },
+      "larger": {
+        "en": "bigger",
+        "ar": "أكبر"
+      },
+      "reliable": {
+        "en": "that you can trust to work well",
+        "ar": "موثوق"
+      },
+      "comfortable": {
+        "en": "pleasant to sit in or use",
+        "ar": "مريح"
+      }
+    },
+    "questions": [
+      {
+        "q": "Which room is quieter?",
+        "o": [
+          "The new room",
+          "Both rooms",
+          "Neither room is quiet",
+          "The old room"
+        ],
+        "a": 3,
+        "why": "Nora says <b>the old room is quieter</b>.",
+        "whyAr": "تقول نورة إن القاعة القديمة أهدأ."
+      },
+      {
+        "q": "Why do they choose the new room?",
+        "o": [
+          "It is bigger and has better internet",
+          "It is the quietest room",
+          "It has fewer chairs",
+          "It is nearer to the gate"
+        ],
+        "a": 0,
+        "why": "The new room is larger and the internet there is more reliable.",
+        "whyAr": "القاعة الجديدة أكبر والإنترنت فيها أكثر موثوقية."
+      },
+      {
+        "q": "This room is ___ than the old one.",
+        "o": [
+          "comfortabler",
+          "more comfortable",
+          "most comfortable",
+          "as comfortable"
+        ],
+        "a": 1,
+        "why": "Long adjectives take <b>more</b> plus <b>than</b> in a comparison.",
+        "whyAr": "الصفات الطويلة تأخذ more مع than في المقارنة."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue with a partner or alone. Compare two places that you know.",
+      "promptAr": "تدرّب على الحوار مع زميل أو وحدك، وقارن بين مكانين تعرفهما."
+    }
   },
   quiz: [
     {

@@ -110,6 +110,7 @@
         D.words.map(function (w) { return "<tr><td><b>" + esc(w.en) + '</b> <span class="muted">' + esc(w.pos) + "</span></td><td>" + esc(w.ex) + '</td><td lang="ar" dir="rtl">' + esc(w.ar) + "</td></tr>"; }).join("") + "</tbody></table></div>";
       if (D.focus) h += "<h3>" + esc(D.focus.title) + "</h3>" + D.focus.explain.split(/\n\n+/).map(function (p) { return "<p>" + rich(p) + "</p>"; }).join("") +
         "<ul>" + D.focus.examples.map(function (x) { return "<li>" + rich(x.en) + "</li>"; }).join("") + "</ul>" + '<p><b>Watch out:</b> ' + rich(D.focus.watchOut.en) + "</p>";
+      if (D.dialogue) h += "<h3>Dialogue: " + esc(D.dialogue.title) + "</h3><p><em>" + esc(D.dialogue.setting) + "</em></p><ul>" + D.dialogue.lines.map(function (l) { return "<li><b>" + esc(l.speaker) + ":</b> " + esc(l.text) + "</li>"; }).join("") + "</ul>";
       if (D.recap) h += "<h3>" + esc(D.recap.title) + "</h3><ul>" + D.recap.points.map(function (p) { return "<li>" + rich(p.en) + "</li>"; }).join("") + "</ul>";
       h += "</section>";
     });

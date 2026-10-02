@@ -6,3 +6,5 @@ qa/
 tools/
 node_modules/
 *.zip
+cowork-pack/
+extra-source/

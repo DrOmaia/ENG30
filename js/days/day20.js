@@ -4,7 +4,7 @@ DAYS[20] = {
   title: "Review: Reading and lectures", titleAr: "مراجعة: القراءة والمحاضرات",
   goal: "I can read a short academic text, compare two things and follow a short lecture with simple notes.",
   goalAr: "أستطيع أن أقرأ نصًّا أكاديميًّا قصيرًا، وأقارن بين شيئين، وأتابع محاضرة قصيرة مع ملاحظات بسيطة.",
-  plan: { read: 4, listen: 4, speak: 4, write: 7, quiz: 6, recap: 3 },
+  plan: { read: 4, recap: 3, listen: 4, dialogue: 4, speak: 4, write: 6, quiz: 5 },
   recap: {
     title: "Unit 4 at a glance",
     titleAr: "لمحة عن الوحدة 4",
@@ -68,6 +68,126 @@ DAYS[20] = {
     ],
     model: "I use two ways to learn English: classes and apps. First, classes are better than apps for speaking because I talk to a teacher and other students. Classes are also more expensive than apps. Next, apps are cheaper and easier to use on my phone. Right now, I am using an app on the bus. To sum up, apps are the cheapest way to practice, but classes are the best way to improve my speaking.",
     aiPrompt: "I am learning English at level B1. Please check my short text that compares two things. Correct the grammar, especially comparatives (than), superlatives (the best) and the present continuous. Explain each mistake in simple words and show a better version. My text: [paste your text here]"
+  },
+  dialogue: {
+    "title": "Getting ready for the reading test",
+    "titleAr": "الاستعداد لاختبار القراءة",
+    "setting": "Three students talk about their reading and note-taking methods.",
+    "settingAr": "ثلاثة طلاب يتحدثون عن طرقهم في القراءة وتدوين الملاحظات.",
+    "lines": [
+      {
+        "speaker": "Sara",
+        "text": "Hamza, are you ready for the reading test?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "I'm practicing now. I skim the first paragraph, then I scan for details."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Is the new book harder than the old one?"
+      },
+      {
+        "speaker": "Hamza",
+        "text": "A little. The passages are longer, but the words are more common."
+      },
+      {
+        "speaker": "Sara",
+        "text": "I take notes with symbols. It's faster than full sentences."
+      },
+      {
+        "speaker": "Lina",
+        "text": "That is the most useful method for me too."
+      },
+      {
+        "speaker": "Hamza",
+        "text": "The lecturer gives us a short outline before each talk."
+      },
+      {
+        "speaker": "Sara",
+        "text": "I always copy it. Then I add details during the lecture."
+      },
+      {
+        "speaker": "Lina",
+        "text": "Good. Let's compare our notes after the test on Sunday."
+      }
+    ],
+    "gloss": {
+      "skim": {
+        "en": "to read fast for the general idea",
+        "ar": "يقرأ قراءة سريعة"
+      },
+      "scan": {
+        "en": "to look quickly for one piece of information",
+        "ar": "يمسح النص بحثًا عن معلومة"
+      },
+      "passages": {
+        "en": "short parts of a text",
+        "ar": "مقاطع نصّية"
+      },
+      "longer": {
+        "en": "with more words or more time",
+        "ar": "أطول"
+      },
+      "symbols": {
+        "en": "short signs that stand for words",
+        "ar": "رموز"
+      },
+      "outline": {
+        "en": "a short plan with the main points",
+        "ar": "مخطط / هيكل"
+      },
+      "details": {
+        "en": "the small pieces of information",
+        "ar": "تفاصيل"
+      },
+      "compare": {
+        "en": "to look at two things and see the differences",
+        "ar": "يقارن"
+      }
+    },
+    "questions": [
+      {
+        "q": "What does Hamza do first with a text?",
+        "o": [
+          "He scans for numbers",
+          "He skims the first paragraph",
+          "He copies the outline",
+          "He writes full sentences"
+        ],
+        "a": 1,
+        "why": "He says <b>I skim the first paragraph, then I scan for details</b>.",
+        "whyAr": "يقول إنه يقرأ الفقرة الأولى قراءة سريعة ثم يمسح النص بحثًا عن التفاصيل."
+      },
+      {
+        "q": "Why does Sara use symbols in her notes?",
+        "o": [
+          "She cannot spell the words",
+          "The teacher asks for symbols",
+          "Writing with symbols is faster",
+          "She has no paper"
+        ],
+        "a": 2,
+        "why": "She says it is <b>faster than full sentences</b>.",
+        "whyAr": "تقول إن ذلك أسرع من كتابة جمل كاملة."
+      },
+      {
+        "q": "The passages are ___ than in the old book.",
+        "o": [
+          "long",
+          "longest",
+          "more long",
+          "longer"
+        ],
+        "a": 3,
+        "why": "Short adjectives take <b>-er</b> plus <b>than</b>.",
+        "whyAr": "الصفات القصيرة تأخذ -er مع than."
+      }
+    ],
+    "roleplay": {
+      "prompt": "Practice the dialogue in groups of three. Compare your note-taking methods.",
+      "promptAr": "تدرّبوا على الحوار في مجموعات من ثلاثة، وقارنوا طرقكم في تدوين الملاحظات."
+    }
   },
   quiz: [
     {
