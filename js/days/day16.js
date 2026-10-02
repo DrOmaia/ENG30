@@ -93,10 +93,10 @@ DAYS[16] = {
     "lines": [
       {
         "speaker": "Hamza",
-        "text": "Dr. Rand, this passage is long. I'm reading every word."
+        "text": "Dr. Rund, this passage is long. I'm reading every word."
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Don't do that. Skim it first for the main idea."
       },
       {
@@ -104,7 +104,7 @@ DAYS[16] = {
         "text": "How do I find the purpose of the writer?"
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Read the first sentence of each paragraph carefully."
       },
       {
@@ -112,7 +112,7 @@ DAYS[16] = {
         "text": "I see. And how do I find the small details?"
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Scan for numbers and names. You don't need every word."
       },
       {
@@ -120,7 +120,7 @@ DAYS[16] = {
         "text": "Can I predict the topic from the headline?"
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Yes. A good headline always gives you a clue."
       },
       {
@@ -172,11 +172,11 @@ DAYS[16] = {
           "The name of the writer"
         ],
         "a": 1,
-        "why": "Dr. Rand says <b>Read the first sentence of each paragraph</b>.",
+        "why": "Dr. Rund says <b>Read the first sentence of each paragraph</b>.",
         "whyAr": "تقول د. رند: اقرأ الجملة الأولى من كل فقرة."
       },
       {
-        "q": "Why does Dr. Rand tell Hamza not to read every word?",
+        "q": "Why does Dr. Rund tell Hamza not to read every word?",
         "o": [
           "Because the passage is very easy",
           "Because the words are wrong",

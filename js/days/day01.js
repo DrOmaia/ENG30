@@ -126,7 +126,7 @@ The teacher says, "Welcome, everyone! You are classmates now." We are happy. We 
       },
       {
         "speaker": "Omar",
-        "text": "Yes. The teacher is new too. Her name is Dr. Rand."
+        "text": "Yes. The teacher is new too. Her name is Dr. Rund."
       }
     ],
     "gloss": {

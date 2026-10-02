@@ -80,10 +80,10 @@ DAYS[5] = {
     "lines": [
       {
         "speaker": "Sara",
-        "text": "Hello, Dr. Rand. This is Omar. He is a new student here."
+        "text": "Hello, Dr. Rund. This is Omar. He is a new student here."
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Welcome, Omar. Where are you from?"
       },
       {
@@ -91,7 +91,7 @@ DAYS[5] = {
         "text": "I'm from Amman. My major is business. This is my first week."
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Good. Do you have a class this morning?"
       },
       {
@@ -99,7 +99,7 @@ DAYS[5] = {
         "text": "Yes, I do. Is the class in room 12 or room 14?"
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "Room 12. The lesson starts at nine fifteen every day."
       },
       {
@@ -111,7 +111,7 @@ DAYS[5] = {
         "text": "Usually, yes. But today my neighbor drives me."
       },
       {
-        "speaker": "Dr. Rand",
+        "speaker": "Dr. Rund",
         "text": "The calendar is on the wall. The exam week is in December."
       },
       {
@@ -163,7 +163,7 @@ DAYS[5] = {
           "At ten"
         ],
         "a": 0,
-        "why": "Dr. Rand says <b>The lesson starts at nine fifteen</b>.",
+        "why": "Dr. Rund says <b>The lesson starts at nine fifteen</b>.",
         "whyAr": "تقول د. رند إن الدرس يبدأ في التاسعة والربع."
       },
       {
