@@ -1,0 +1,8 @@
+.claude/
+CLAUDE.md
+PLAN.md
+HOW-TO-EDIT.md
+qa/
+tools/
+node_modules/
+*.zip
