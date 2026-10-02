@@ -92,7 +92,7 @@ DAYS[27] = {
     "settingAr": "معلّمة تقدّم لطالب ملاحظات على بنية مسوّدته.",
     "lines": [
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Sam, I've read your draft. The structure needs some work."
       },
       {
@@ -100,7 +100,7 @@ DAYS[27] = {
         "text": "Where exactly is the problem?"
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Your main idea is in the last line. Put it first."
       },
       {
@@ -108,7 +108,7 @@ DAYS[27] = {
         "text": "So the first sentence introduces the topic?"
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Yes. Then two or three sentences support it with clear examples."
       },
       {
@@ -116,7 +116,7 @@ DAYS[27] = {
         "text": "And at the end I summarize the same idea?"
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Exactly. Use a short conclusion. Also name your source for the numbers."
       },
       {
@@ -164,11 +164,11 @@ DAYS[27] = {
           "In the title"
         ],
         "a": 2,
-        "why": "Dr. Rana says <b>Your main idea is in the last line. Put it first</b>.",
-        "whyAr": "تقول د. رنا إن فكرته الرئيسية في السطر الأخير، وعليه أن يضعها أولًا."
+        "why": "Dr. Rand says <b>Your main idea is in the last line. Put it first</b>.",
+        "whyAr": "تقول د. رند إن فكرته الرئيسية في السطر الأخير، وعليه أن يضعها أولًا."
       },
       {
-        "q": "Why does Dr. Rana ask for a source?",
+        "q": "Why does Dr. Rand ask for a source?",
         "o": [
           "Because the draft is too short",
           "Because Sam has no conclusion",

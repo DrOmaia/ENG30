@@ -80,10 +80,10 @@ DAYS[5] = {
     "lines": [
       {
         "speaker": "Sara",
-        "text": "Hello, Dr. Rana. This is Omar. He is a new student here."
+        "text": "Hello, Dr. Rand. This is Omar. He is a new student here."
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Welcome, Omar. Where are you from?"
       },
       {
@@ -91,7 +91,7 @@ DAYS[5] = {
         "text": "I'm from Amman. My major is business. This is my first week."
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Good. Do you have a class this morning?"
       },
       {
@@ -99,7 +99,7 @@ DAYS[5] = {
         "text": "Yes, I do. Is the class in room 12 or room 14?"
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "Room 12. The lesson starts at nine fifteen every day."
       },
       {
@@ -111,7 +111,7 @@ DAYS[5] = {
         "text": "Usually, yes. But today my neighbor drives me."
       },
       {
-        "speaker": "Dr. Rana",
+        "speaker": "Dr. Rand",
         "text": "The calendar is on the wall. The exam week is in December."
       },
       {
@@ -163,8 +163,8 @@ DAYS[5] = {
           "At ten"
         ],
         "a": 0,
-        "why": "Dr. Rana says <b>The lesson starts at nine fifteen</b>.",
-        "whyAr": "تقول د. رنا إن الدرس يبدأ في التاسعة والربع."
+        "why": "Dr. Rand says <b>The lesson starts at nine fifteen</b>.",
+        "whyAr": "تقول د. رند إن الدرس يبدأ في التاسعة والربع."
       },
       {
         "q": "Why is today different for Omar?",
